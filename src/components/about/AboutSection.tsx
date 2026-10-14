@@ -130,10 +130,6 @@ export const AboutSection: React.FC = () => {
                     {t('about.email')}
                   </a>
                 </div>
-                <div className="flex items-center gap-3 text-gray-300">
-                  <FiPhone className="text-blue-400 shrink-0" />
-                  <span>{t('about.phone')}</span>
-                </div>
                 <div className="flex items-center gap-3 text-gray-300 pt-1">
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping shrink-0" />
                   <span className="text-emerald-300 font-mono text-xs">{t('about.status')}</span>

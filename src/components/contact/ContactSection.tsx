@@ -91,21 +91,6 @@ export const ContactSection: React.FC = () => {
                   </div>
                 </a>
 
-                <a
-                  href="tel:+34640770380"
-                  className="flex items-center gap-4 p-3.5 rounded-xl bg-white/5 border border-white/5 hover:border-emerald-400/40 hover:bg-white/10 transition-all group"
-                >
-                  <div className="w-10 h-10 rounded-lg bg-emerald-950/50 border border-emerald-500/30 flex items-center justify-center text-emerald-400 group-hover:scale-110 transition-transform">
-                    <FiPhone size={18} />
-                  </div>
-                  <div>
-                    <span className="text-xs font-mono text-gray-400 block">TELÉFONO</span>
-                    <span className="text-sm font-semibold text-white group-hover:text-emerald-300">
-                      +34 640 770 380
-                    </span>
-                  </div>
-                </a>
-
                 <div className="flex items-center gap-4 p-3.5 rounded-xl bg-white/5 border border-white/5">
                   <div className="w-10 h-10 rounded-lg bg-blue-950/50 border border-blue-500/30 flex items-center justify-center text-blue-400">
                     <FiMapPin size={18} />
@@ -113,7 +98,7 @@ export const ContactSection: React.FC = () => {
                   <div>
                     <span className="text-xs font-mono text-gray-400 block">UBICACIÓN</span>
                     <span className="text-sm font-semibold text-white">
-                      Mataró / Barcelona, España
+                      Barcelona, España (Disponible para Barcelona y alrededores)
                     </span>
                   </div>
                 </div>

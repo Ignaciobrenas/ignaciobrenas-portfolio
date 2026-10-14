@@ -38,7 +38,7 @@
   "about": {
     "badge": "PERFIL PROFESIONAL",
     "title": "Sobre Mí",
-    "lead": "Desarrollador de Software enfocado en TypeScript y estudiante de DAW afincado en Mataró (Barcelona).",
+    "lead": "Desarrollador de Software enfocado en TypeScript y estudiante de DAW afincado en Barcelona (disponible para Barcelona y alrededores).",
     "bio1": "Cuento con una sólida base técnica adquirida tanto en mi formación académica (CFGS en Desarrollo de Aplicaciones Web y CFGM en Sistemas Microinformáticos y Redes en STUCOM Pelai) como en experiencias profesionales prácticas en entornos de producción.",
     "bio2": "Mi perfil técnico combina el desarrollo web full-stack centrado en TypeScript y Node.js, el diseño de APIs robustas, la gestión y analítica de datos y el despliegue de infraestructuras virtualizadas (Docker, contenedores LXC, WSL y entornos Linux).",
     "bio3": "Me considero una persona proactiva, resolutiva y con gran capacidad de adaptación, habituada a trabajar bajo metodologías Agile y motivada por aportar valor en proyectos reales y dinámicos.",
@@ -64,9 +64,8 @@
       "english": "Inglés (Técnico / Profesional)"
     },
     "infoTitle": "Detalles Rápidos",
-    "location": "Mataró / Barcelona, España",
+    "location": "Barcelona, España (Disponible para Barcelona y alrededores)",
     "email": "ignaciobrenas@gmail.com",
-    "phone": "+34 640 770 380",
     "status": "Software Developer Intern @ Soterguard"
   },
   "experience": {

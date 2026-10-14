@@ -1,0 +1,209 @@
+{
+  "splash": {
+    "errorCode": "404",
+    "errorTitle": "SYSTEM ERROR: UNAUTHORIZED ACCESS",
+    "subtitle": "> Initializing bypass protocol... Decoding profile of Ignacio Breñas.",
+    "pressAnyKey": "Click or press any key to enter system",
+    "skip": "Skip intro",
+    "rebooting": "SYSTEM UNLOCKED - LOADING KERNEL..."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Me",
+    "experience": "Experience",
+    "education": "Education",
+    "techStack": "3D Stack",
+    "projects": "Projects",
+    "academic": "Academic",
+    "contact": "Contact",
+    "downloadCV": "Download CV",
+    "lang": "EN"
+  },
+  "hero": {
+    "badge": "AVAILABLE FOR NEW OPPORTUNITIES",
+    "greeting": "Hi, I am",
+    "name": "Ignacio Breñas Muñoz",
+    "role": "Software Developer & DAW Student",
+    "description": "Specialized in TypeScript, Node.js, and Full-Stack ecosystems. Hands-on experience in client-server architectures, RESTful APIs, optimized databases, and virtualized infrastructure.",
+    "badges": {
+      "typescript": "TypeScript & Node.js",
+      "intern": "Intern @ Soterguard",
+      "fullstack": "Full-Stack & On-Premise",
+      "systems": "Docker & Linux SysAdmin"
+    },
+    "viewProjects": "Explore Projects",
+    "contactMe": "Get In Touch",
+    "scrollDown": "Scroll to explore"
+  },
+  "about": {
+    "badge": "PROFESSIONAL PROFILE",
+    "title": "About Me",
+    "lead": "Software Developer focused on TypeScript and DAW student based in Mataró (Barcelona, Spain).",
+    "bio1": "I hold a solid technical foundation acquired through academic education (Higher National Degree in Web Application Development and VET in Microcomputer Systems & Networks at STUCOM Pelai) and real-world production environments.",
+    "bio2": "My technical profile integrates full-stack web development centered on TypeScript and Node.js, robust API design, data management and analytics, and virtualized infrastructure deployments (Docker, LXC containers, WSL, and Linux environments).",
+    "bio3": "I consider myself a proactive, problem-solving professional with strong adaptability, accustomed to Agile workflows and passionate about delivering high value to dynamic software projects.",
+    "stats": {
+      "experienceYears": "2+",
+      "experienceLabel": "Years hands-on experience",
+      "repos": "30+",
+      "reposLabel": "Code repositories",
+      "academicRate": "100%",
+      "academicLabel": "Dedication and quality"
+    },
+    "softSkillsTitle": "Soft Skills",
+    "softSkills": {
+      "leadership": "Leadership",
+      "organization": "Organization",
+      "problemSolving": "Problem Solving",
+      "teamwork": "Teamwork",
+      "proactivity": "Proactivity"
+    },
+    "languagesTitle": "Languages",
+    "languages": {
+      "spanish": "Spanish (Native)",
+      "english": "English (Technical / Professional)"
+    },
+    "infoTitle": "Quick Details",
+    "location": "Mataró / Barcelona, Spain",
+    "email": "ignaciobrenas@gmail.com",
+    "phone": "+34 640 770 380",
+    "status": "Software Developer Intern @ Soterguard"
+  },
+  "experience": {
+    "badge": "CAREER TRAJECTORY",
+    "title": "Work Experience",
+    "soterguard": {
+      "role": "Software Developer Intern",
+      "company": "Soterguard",
+      "period": "May 2026 – Present",
+      "location": "Barcelona / Remote",
+      "bullet1": "Development, maintenance, and deployment of web applications and On-Premise solutions for clients under Agile methodologies.",
+      "bullet2": "Design and implementation of server logic and RESTful APIs utilizing Node.js, TypeScript, and Python.",
+      "bullet3": "Management, modeling, and optimization of relational databases (PostgreSQL) with PrismaORM.",
+      "bullet4": "Configuration and provisioning of virtualized environments using Docker, LXC containers, and WSL."
+    },
+    "vimtech": {
+      "role": "IT Technician Intern",
+      "company": "VimTech",
+      "period": "September 2024 – March 2025",
+      "location": "El Masnou, Barcelona",
+      "bullet1": "Hardware diagnosis, maintenance, and repair with high specialization in Apple devices (Mac, iPhone, iPad).",
+      "bullet2": "Installation and configuration of operating systems (macOS, Windows, Linux distributions).",
+      "bullet3": "Tailored customer technological advisory and incident troubleshooting."
+    },
+    "ajma": {
+      "role": "IT & Web Volunteering",
+      "company": "AJMA",
+      "period": "March 2023 – August 2025",
+      "location": "Barcelona",
+      "bullet1": "Design, administration, and continuous maintenance of the association's official website.",
+      "bullet2": "Comprehensive IT workstation support and technical audiovisual assistance (camera and sound) at public events."
+    }
+  },
+  "education": {
+    "badge": "ACADEMIC BACKGROUND",
+    "title": "Degrees & Certifications",
+    "daw": {
+      "degree": "Higher National Diploma in Web Application Development (DAW)",
+      "center": "STUCOM Pelai Education Center",
+      "period": "2025 – 2027",
+      "location": "Barcelona",
+      "description": "Advanced training in full-stack web engineering, modern frameworks (React, Angular, Symfony, Laravel), client-server paradigms, web security, and relational database modeling."
+    },
+    "smr": {
+      "degree": "Vocational Degree in Microcomputer Systems & Networks (SMR)",
+      "center": "STUCOM Pelai Education Center",
+      "period": "2023 – 2025",
+      "location": "Barcelona",
+      "description": "Comprehensive foundation in local area network administration, Windows/Linux server management, virtualization, hardware assembly, technical support, and backup security protocols."
+    }
+  },
+  "techStack": {
+    "badge": "TECHNOLOGIES & TOOLS",
+    "title": "3D Tech Stack",
+    "subtitle": "Explore my interactive 3D constellation. Rotate, zoom in or hover over each orbital node to see how I leverage each technology.",
+    "interactiveHint": "Drag to orbit in 3D · Wheel to Zoom",
+    "tabs": {
+      "all": "All",
+      "languages": "Languages",
+      "frameworks": "Frameworks",
+      "database": "Databases",
+      "infra": "Infrastructure & DevOps",
+      "ai": "AI & Data"
+    }
+  },
+  "projects": {
+    "badge": "PORTFOLIO & WORKS",
+    "title": "Personal Projects",
+    "subtitle": "Independent developments focused on artificial intelligence, bleeding-edge protocol integrations, full-stack web apps, and computer vision.",
+    "viewCode": "Source Code",
+    "liveDemo": "Live Demo",
+    "canvaMCP": {
+      "title": "Canva Connector MCP",
+      "desc": "Intelligent connector integrating Model Context Protocol (MCP) and Canva Connect API with OAuth 2.0 PKCE, empowering AI agents to autonomously generate and manipulate presentations."
+    },
+    "argusFraud": {
+      "title": "Argus Fraud Radar",
+      "desc": "Enterprise real-time banking fraud detection platform built with PySpark, Medallion Architecture, LightGBM, FastAPI, and Streamlit. Developed for UNITA Erasmus+ BIP."
+    },
+    "skeletonMeme": {
+      "title": "Skeleton-Meme Productivity Tool",
+      "desc": "Computer vision productivity utility leveraging MediaPipe Face Mesh and OpenCV in Python to detect fatigue and maintain focus in front of the screen."
+    },
+    "runAndEat2": {
+      "title": "RunAndEat 2.0.0",
+      "desc": "Modern culinary events and restaurant booking platform architected with Laravel 11, Vue.js, Tailwind CSS, and Vite."
+    },
+    "damaCrm": {
+      "title": "DAMA-CRM",
+      "desc": "Enterprise customer relationship management system engineered with TypeScript, reactive UI state, and structured data validation."
+    },
+    "lugiaTerminal": {
+      "title": "Lugia Terminal Setup",
+      "desc": "The ultimate cyberpunk neon development terminal configuration with Lugia theme for Windows Terminal, PowerShell, and advanced CLI productivity tools."
+    },
+    "portfolioOld": {
+      "title": "Glassmorphism Web Portfolio",
+      "desc": "Previous personal portfolio website crafted with modern glassmorphism aesthetic, semantic HTML5, CSS3 styling, and JavaScript deployed on Vercel."
+    }
+  },
+  "academic": {
+    "badge": "STUCOM PELAI · ACADEMIC PROJECTS",
+    "title": "Academic Repositories",
+    "subtitle": "Over 20 academic projects crafted during my DAW and SMR education, applying OOP, architectural design patterns (DAO, Strategy, MVC), TDD, and test suites.",
+    "filterAll": "All",
+    "filterJava": "Java & OOP",
+    "filterPhp": "PHP & Backend",
+    "filterQa": "QA & Debugging",
+    "filterWeb": "Web Engineering",
+    "searchPlaceholder": "Search academic project...",
+    "viewRepo": "Repository"
+  },
+  "contact": {
+    "badge": "GET IN TOUCH",
+    "title": "Contact & Collaboration",
+    "subtitle": "Have an exciting role, software project, or technical question? Drop me a message and I'll get back to you promptly.",
+    "form": {
+      "name": "Full Name",
+      "namePlaceholder": "e.g. John Doe",
+      "email": "Email Address",
+      "emailPlaceholder": "john@company.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "Project proposal / Job opportunity",
+      "message": "Message",
+      "messagePlaceholder": "Briefly describe your proposal or inquiry...",
+      "send": "Send Message",
+      "sending": "Transmitting data...",
+      "success": "Message transmitted successfully! I will reply shortly.",
+      "error": "Error transmitting message. You can reach out directly to ignaciobrenas@gmail.com."
+    },
+    "directContact": "Direct Channels",
+    "downloadCVButton": "Download Curriculum Vitae (PDF)"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "builtWith": "Crafted with React 19, TypeScript, Three.js, and Tailwind CSS.",
+    "systemStatus": "STATUS: ONLINE · KERNEL 2.6.4 · LATENCY 12ms",
+    "backToTop": "Back to top"
+  }
+}

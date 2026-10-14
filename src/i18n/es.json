@@ -1,0 +1,209 @@
+{
+  "splash": {
+    "errorCode": "404",
+    "errorTitle": "ERROR DE SISTEMA: ACCESO NO AUTORIZADO",
+    "subtitle": "> Inicializando protocolo de bypass... Decodificando perfil de Ignacio Breñas.",
+    "pressAnyKey": "Haz clic o presiona cualquier tecla para ingresar al sistema",
+    "skip": "Saltar intro",
+    "rebooting": "SISTEMA DESBLOQUEADO - CARGANDO KERNEL..."
+  },
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre Mí",
+    "experience": "Experiencia",
+    "education": "Formación",
+    "techStack": "Stack 3D",
+    "projects": "Proyectos",
+    "academic": "Académicos",
+    "contact": "Contacto",
+    "downloadCV": "Descargar CV",
+    "lang": "ES"
+  },
+  "hero": {
+    "badge": "DISPONIBLE PARA NUEVOS RETOS",
+    "greeting": "Hola, soy",
+    "name": "Ignacio Breñas Muñoz",
+    "role": "Desarrollador de Software & Estudiante DAW",
+    "description": "Especializado en TypeScript, Node.js y ecosistemas Full-Stack. Experiencia real en arquitecturas cliente-servidor, APIs RESTful, bases de datos optimizadas e infraestructura virtualizada.",
+    "badges": {
+      "typescript": "TypeScript & Node.js",
+      "intern": "Intern @ Soterguard",
+      "fullstack": "Full-Stack & On-Premise",
+      "systems": "Docker & Linux SysAdmin"
+    },
+    "viewProjects": "Explorar Proyectos",
+    "contactMe": "Contactar",
+    "scrollDown": "Desliza para explorar"
+  },
+  "about": {
+    "badge": "PERFIL PROFESIONAL",
+    "title": "Sobre Mí",
+    "lead": "Desarrollador de Software enfocado en TypeScript y estudiante de DAW afincado en Mataró (Barcelona).",
+    "bio1": "Cuento con una sólida base técnica adquirida tanto en mi formación académica (CFGS en Desarrollo de Aplicaciones Web y CFGM en Sistemas Microinformáticos y Redes en STUCOM Pelai) como en experiencias profesionales prácticas en entornos de producción.",
+    "bio2": "Mi perfil técnico combina el desarrollo web full-stack centrado en TypeScript y Node.js, el diseño de APIs robustas, la gestión y analítica de datos y el despliegue de infraestructuras virtualizadas (Docker, contenedores LXC, WSL y entornos Linux).",
+    "bio3": "Me considero una persona proactiva, resolutiva y con gran capacidad de adaptación, habituada a trabajar bajo metodologías Agile y motivada por aportar valor en proyectos reales y dinámicos.",
+    "stats": {
+      "experienceYears": "2+",
+      "experienceLabel": "Años de experiencia práctica",
+      "repos": "30+",
+      "reposLabel": "Repositorios de código",
+      "academicRate": "100%",
+      "academicLabel": "Compromiso y calidad"
+    },
+    "softSkillsTitle": "Habilidades Blandas",
+    "softSkills": {
+      "leadership": "Liderazgo",
+      "organization": "Organización",
+      "problemSolving": "Resolución de Problemas",
+      "teamwork": "Trabajo en Equipo",
+      "proactivity": "Proactividad"
+    },
+    "languagesTitle": "Idiomas",
+    "languages": {
+      "spanish": "Castellano (Nativo)",
+      "english": "Inglés (Técnico / Profesional)"
+    },
+    "infoTitle": "Detalles Rápidos",
+    "location": "Mataró / Barcelona, España",
+    "email": "ignaciobrenas@gmail.com",
+    "phone": "+34 640 770 380",
+    "status": "Software Developer Intern @ Soterguard"
+  },
+  "experience": {
+    "badge": "TRAYECTORIA LABORAL",
+    "title": "Experiencia Profesional",
+    "soterguard": {
+      "role": "Software Developer Intern",
+      "company": "Soterguard",
+      "period": "Mayo 2026 – Actualidad",
+      "location": "Barcelona / Remoto",
+      "bullet1": "Desarrollo, mantenimiento y despliegue de aplicaciones web y soluciones On-Premise para clientes bajo metodologías Agile.",
+      "bullet2": "Diseño e implementación de lógica de servidor y APIs RESTful utilizando Node.js, TypeScript y Python.",
+      "bullet3": "Gestión, modelado y optimización de bases de datos relacionales (PostgreSQL) con PrismaORM.",
+      "bullet4": "Configuración y aprovisionamiento de entornos virtualizados utilizando Docker, contenedores LXC y WSL."
+    },
+    "vimtech": {
+      "role": "Técnico Informático en Prácticas",
+      "company": "VimTech",
+      "period": "Septiembre 2024 – Marzo 2025",
+      "location": "El Masnou, Barcelona",
+      "bullet1": "Diagnóstico, reparación de hardware y mantenimiento preventivo/correctivo de equipos, con alta especialización en dispositivos Apple.",
+      "bullet2": "Instalación y configuración de sistemas operativos (macOS, Windows, distribuciones Linux).",
+      "bullet3": "Asesoramiento tecnológico personalizado y resolución técnica de incidencias."
+    },
+    "ajma": {
+      "role": "Voluntariado (Técnico y Web)",
+      "company": "AJMA",
+      "period": "Marzo 2023 – Agosto 2025",
+      "location": "Barcelona",
+      "bullet1": "Diseño, administración y mantenimiento continuo de la página web oficial de la asociación.",
+      "bullet2": "Soporte informático integral de equipos y asistencia técnica audiovisual (cámara y sonido) en eventos."
+    }
+  },
+  "education": {
+    "badge": "FORMACIÓN ACADÉMICA",
+    "title": "Estudios y Titulaciones",
+    "daw": {
+      "degree": "CFGS en Desarrollo de Aplicaciones Web (DAW)",
+      "center": "Centro de Estudios STUCOM Pelai",
+      "period": "2025 – 2027",
+      "location": "Barcelona",
+      "description": "Especialización avanzada en desarrollo web full-stack, frameworks modernos (React, Angular, Symfony, Laravel), arquitectura cliente-servidor, seguridad web y diseño de bases de datos relacionales."
+    },
+    "smr": {
+      "degree": "CFGM en Sistemas Microinformáticos y Redes (SMR)",
+      "center": "Centro de Estudios STUCOM Pelai",
+      "period": "2023 – 2025",
+      "location": "Barcelona",
+      "description": "Formación integral en administración de redes de área local, configuración de servidores Windows y Linux, virtualización, montaje y soporte técnico de hardware y políticas de seguridad."
+    }
+  },
+  "techStack": {
+    "badge": "TECNOLOGÍAS & HERRAMIENTAS",
+    "title": "Stack Tecnológico 3D",
+    "subtitle": "Explora mi ecosistema interactivo en 3D. Rota, haz zoom o pasa el cursor sobre cada nodo orbital para descubrir cómo lo aplico.",
+    "interactiveHint": "Arrastra para orbitar en 3D · Rueda para hacer Zoom",
+    "tabs": {
+      "all": "Todos",
+      "languages": "Lenguajes",
+      "frameworks": "Frameworks",
+      "database": "Bases de Datos",
+      "infra": "Infraestructura & DevOps",
+      "ai": "IA & Datos"
+    }
+  },
+  "projects": {
+    "badge": "PORTFOLIO & TRABAJOS",
+    "title": "Proyectos Personales",
+    "subtitle": "Desarrollos independientes centrados en inteligencia artificial, integraciones de vanguardia, full-stack y visión artificial.",
+    "viewCode": "Código en GitHub",
+    "liveDemo": "Ver Demo",
+    "canvaMCP": {
+      "title": "Canva Connector MCP",
+      "desc": "Conector inteligente que implementa Model Context Protocol (MCP) y Canva Connect API con OAuth 2.0 PKCE, permitiendo a agentes de IA generar y manipular presentaciones de forma autónoma."
+    },
+    "argusFraud": {
+      "title": "Argus Fraud Radar",
+      "desc": "Plataforma empresarial de detección de fraude bancario en tiempo real desarrollada con PySpark, Arquitectura Medallion, LightGBM, FastAPI y Streamlit. Proyecto galardonado en UNITA Erasmus+ BIP."
+    },
+    "skeletonMeme": {
+      "title": "Skeleton-Meme Productivity Tool",
+      "desc": "Herramienta de productividad mediante visión por computador utilizando MediaPipe Face Mesh y OpenCV en Python para alertar y prevenir fatiga y distracciones frente a la pantalla."
+    },
+    "runAndEat2": {
+      "title": "RunAndEat 2.0.0",
+      "desc": "Plataforma integral para reservas gastronómicas y gestión de eventos urbanos con arquitectura moderna en Laravel 11, Vue.js, Tailwind CSS y Vite."
+    },
+    "damaCrm": {
+      "title": "DAMA-CRM",
+      "desc": "Sistema de gestión de relaciones con clientes (CRM) empresarial desarrollado con TypeScript, interfaces reactivas y control de flujo de datos estructurado."
+    },
+    "lugiaTerminal": {
+      "title": "Lugia Terminal Setup",
+      "desc": "Entorno definitivo de desarrollo cyberpunk neón con temática de Lugia para Windows Terminal, PowerShell y herramientas avanzadas de productividad en consola."
+    },
+    "portfolioOld": {
+      "title": "Portfolio Web Glassmorphism",
+      "desc": "Sitio web de portfolio previo desarrollado con estética Glassmorphism moderna, HTML5 semántico, CSS3 avanzado y JavaScript vainilla desplegado en Vercel."
+    }
+  },
+  "academic": {
+    "badge": "STUCOM PELAI · PROYECTOS ACADÉMICOS",
+    "title": "Proyectos Académicos",
+    "subtitle": "Más de 20 proyectos estructurados realizados durante mi formación en DAW y SMR, aplicando POO, patrones de diseño (DAO, Strategy, MVC), TDD y testing.",
+    "filterAll": "Todos",
+    "filterJava": "Java & POO",
+    "filterPhp": "PHP & Backend",
+    "filterQa": "QA & Debugging",
+    "filterWeb": "Desarrollo Web",
+    "searchPlaceholder": "Buscar proyecto académico...",
+    "viewRepo": "Repositorio"
+  },
+  "contact": {
+    "badge": "HABLEMOS",
+    "title": "Contacto & Colaboración",
+    "subtitle": "¿Tienes una oportunidad profesional, un proyecto innovador o una consulta técnica? Envíame un mensaje y te responderé a la brevedad.",
+    "form": {
+      "name": "Nombre completo",
+      "namePlaceholder": "Ej. Juan Pérez",
+      "email": "Correo electrónico",
+      "emailPlaceholder": "juan@empresa.com",
+      "subject": "Asunto",
+      "subjectPlaceholder": "Propuesta de proyecto / Oportunidad laboral",
+      "message": "Mensaje",
+      "messagePlaceholder": "Describe brevemente tu consulta o propuesta...",
+      "send": "Enviar Mensaje",
+      "sending": "Transmitiendo datos...",
+      "success": "¡Mensaje transmitido con éxito! Te responderé pronto.",
+      "error": "Error al enviar el mensaje. Puedes escribirme directamente a ignaciobrenas@gmail.com."
+    },
+    "directContact": "Canales Directos",
+    "downloadCVButton": "Descargar Currículum Vitae (PDF)"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "builtWith": "Desarrollado con React 19, TypeScript, Three.js y Tailwind CSS.",
+    "systemStatus": "STATUS: ONLINE · KERNEL 2.6.4 · LATENCY 12ms",
+    "backToTop": "Volver arriba"
+  }
+}

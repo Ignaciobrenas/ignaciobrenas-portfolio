@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { OrbitControls, Html } from '@react-three/drei'
+import { OrbitControls } from '@react-three/drei'
 import * as THREE from 'three'
 import { techStackData } from '../data/techStack'
 import type { TechItem } from '../data/techStack'
@@ -16,15 +16,19 @@ interface TechNodeProps {
 const TechNode: React.FC<TechNodeProps> = ({ tech, angleOffset, onHover, onSelect, isSelected }) => {
   const meshRef = useRef<THREE.Mesh>(null)
   const [hovered, setHovered] = useState(false)
+  const timeRef = useRef(0)
 
-  useFrame(({ clock }) => {
+  useFrame((_, delta) => {
     if (!meshRef.current) return
-    const t = clock.getElapsedTime() * tech.orbitSpeed * 0.4 + angleOffset
+    timeRef.current += delta
+    const t = timeRef.current * tech.orbitSpeed * 0.35 + angleOffset
     const x = Math.cos(t) * tech.orbitRadius
     const z = Math.sin(t) * tech.orbitRadius
-    const y = Math.sin(t * 1.5) * 0.4 // gentle vertical wave
+    const y = Math.sin(t * 1.5) * 0.35
     meshRef.current.position.set(x, y, z)
   })
+
+  const isHighlighted = hovered || isSelected
 
   return (
     <mesh
@@ -43,25 +47,14 @@ const TechNode: React.FC<TechNodeProps> = ({ tech, angleOffset, onHover, onSelec
         onSelect(tech)
       }}
     >
-      <sphereGeometry args={[hovered || isSelected ? 0.38 : 0.28, 24, 24]} />
+      <sphereGeometry args={[isHighlighted ? 0.38 : 0.28, 24, 24]} />
       <meshStandardMaterial
-        color={hovered || isSelected ? '#ffffff' : tech.color}
+        color={isHighlighted ? '#ffffff' : tech.color}
         emissive={tech.color}
-        emissiveIntensity={hovered || isSelected ? 1.8 : 0.9}
+        emissiveIntensity={isHighlighted ? 2.2 : 0.9}
         roughness={0.15}
         metalness={0.8}
       />
-      <Html distanceFactor={14} position={[0, 0.45, 0]} center>
-        <div
-          className={`px-2 py-0.5 rounded text-[11px] font-mono whitespace-nowrap pointer-events-none transition-all duration-200 ${
-            hovered || isSelected
-              ? 'bg-blue-600 text-white shadow-[0_0_15px_rgba(59,130,246,0.8)] scale-110 font-bold border border-white/50'
-              : 'bg-black/80 text-gray-200 border border-white/10 opacity-80'
-          }`}
-        >
-          {tech.name}
-        </div>
-      </Html>
     </mesh>
   )
 }
@@ -116,11 +109,6 @@ const CentralCore: React.FC = () => {
         />
       </mesh>
       <pointLight color="#38bdf8" intensity={5} distance={12} />
-      <Html distanceFactor={14} position={[0, 0, 0]} center>
-        <div className="bg-black/90 text-cyan-300 font-mono text-xs px-2.5 py-1 rounded border border-cyan-500/50 shadow-[0_0_15px_rgba(6,182,212,0.6)] font-bold pointer-events-none">
-          IGNACIO_CORE
-        </div>
-      </Html>
     </group>
   )
 }
@@ -171,6 +159,18 @@ export const TechOrbitalScene: React.FC<TechOrbitalSceneProps> = ({
           )
         })}
       </Canvas>
+
+      {/* Floating Active Node Pill in Corner of 3D Scene */}
+      {selectedTech && (
+        <div className="absolute top-4 right-4 z-10 hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-black/80 border border-cyan-500/40 text-xs font-mono shadow-[0_0_15px_rgba(6,182,212,0.4)] backdrop-blur-md">
+          <span
+            className="w-2.5 h-2.5 rounded-full shadow-[0_0_8px_currentColor]"
+            style={{ backgroundColor: selectedTech.color, color: selectedTech.color }}
+          />
+          <span className="text-white font-bold">{selectedTech.name}</span>
+          <span className="text-gray-400">({selectedTech.level})</span>
+        </div>
+      )}
 
       {/* Interactive Controls Overlay Hint */}
       <div className="absolute top-4 left-4 pointer-events-none z-10 flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/70 border border-white/10 text-xs font-mono text-cyan-300 backdrop-blur-md">

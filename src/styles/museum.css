@@ -1,0 +1,191 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-museum-dark: #030805;
+    --color-museum-wall: #06110a;
+    --color-museum-card: #0a1a10;
+    --color-museum-elevated: #0f2719;
+    --color-museum-border: #163623;
+    --color-gold-deep: #9d7732;
+    --color-gold-rich: #cfa859;
+    --color-gold-bright: #e9c878;
+    --color-gold-pale: #f6ebd0;
+    --color-parchment: #ede7da;
+    --color-parchment-muted: #a6a193;
+
+    --font-serif: 'Cinzel', 'Playfair Display', Didot, 'Bodoni MT', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+    background-color: var(--color-museum-dark);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-museum-dark);
+    color: var(--color-parchment);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: var(--font-serif);
+    letter-spacing: 0.04em;
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Museum Canvas Texture & Ambient Room Light */
+.museum-canvas-bg {
+  background-color: #030805;
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(20, 56, 35, 0.45) 0%, transparent 60%),
+    radial-gradient(circle at 85% 30%, rgba(13, 38, 24, 0.35) 0%, transparent 50%),
+    radial-gradient(circle at 15% 70%, rgba(16, 44, 28, 0.3) 0%, transparent 55%),
+    linear-gradient(rgba(3, 8, 5, 0.94), rgba(3, 8, 5, 0.94)),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
+}
+
+/* Gallery Spotlight Glow */
+.museum-spotlight {
+  position: relative;
+}
+.museum-spotlight::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 90px;
+  background: radial-gradient(ellipse at top, rgba(233, 200, 120, 0.22) 0%, rgba(207, 168, 89, 0.08) 45%, transparent 75%);
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Gilded Museum Ornate Picture Frame */
+.gilded-frame {
+  position: relative;
+  background: #06110a;
+  border: 1px solid rgba(207, 168, 89, 0.35);
+  box-shadow: 
+    0 0 0 4px #040905,
+    0 0 0 5px rgba(207, 168, 89, 0.2),
+    0 0 0 8px #08160d,
+    0 0 0 9px rgba(207, 168, 89, 0.15),
+    0 25px 50px -12px rgba(0, 0, 0, 0.85),
+    0 0 35px rgba(20, 56, 35, 0.3);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gilded-frame:hover {
+  border-color: rgba(233, 200, 120, 0.65);
+  box-shadow: 
+    0 0 0 4px #040905,
+    0 0 0 5px rgba(233, 200, 120, 0.4),
+    0 0 0 8px #0a1c11,
+    0 0 0 9px rgba(233, 200, 120, 0.25),
+    0 30px 60px -12px rgba(0, 0, 0, 0.95),
+    0 0 45px rgba(207, 168, 89, 0.25);
+  transform: translateY(-4px);
+}
+
+/* Museum Curatorial Brass Plaque */
+.brass-plaque {
+  background: linear-gradient(135deg, #131f16 0%, #0c150e 100%);
+  border: 1px solid rgba(207, 168, 89, 0.3);
+  box-shadow: 
+    inset 0 1px 0 rgba(233, 200, 120, 0.15),
+    0 4px 20px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.brass-plaque::before,
+.brass-plaque::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #cfa859;
+  box-shadow: 0 0 3px rgba(233, 200, 120, 0.6);
+}
+.brass-plaque::before {
+  top: 6px;
+  left: 6px;
+}
+.brass-plaque::after {
+  top: 6px;
+  right: 6px;
+}
+
+/* Glass Vitrine (Atelier Showcase) */
+.glass-vitrine {
+  background: rgba(10, 26, 16, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(207, 168, 89, 0.18);
+  box-shadow: 
+    inset 0 1px 1px rgba(255, 255, 255, 0.06),
+    0 20px 40px rgba(0, 0, 0, 0.6);
+  transition: all 0.4s ease;
+}
+
+.glass-vitrine:hover {
+  background: rgba(15, 39, 25, 0.8);
+  border-color: rgba(233, 200, 120, 0.45);
+  box-shadow: 
+    inset 0 1px 1px rgba(255, 255, 255, 0.1),
+    0 25px 50px rgba(0, 0, 0, 0.75),
+    0 0 30px rgba(207, 168, 89, 0.15);
+}
+
+/* Gold Text Shimmer */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #f6ebd0 0%, #e9c878 50%, #cfa859 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gold-subtle {
+  color: #cfa859;
+}
+
+/* Exhibition Wall Trim / Border */
+.gallery-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(207, 168, 89, 0.4) 50%, transparent 100%);
+}
+
+/* Animated Museum Icon Halo */
+.icon-museum-halo {
+  position: relative;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.icon-museum-halo:hover {
+  transform: scale(1.1) rotate(4deg);
+  filter: drop-shadow(0 0 10px rgba(233, 200, 120, 0.6));
+}
+
+/* Custom Scrollbar for Museum */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #030805;
+}
+::-webkit-scrollbar-thumb {
+  background: #143621;
+  border-radius: 4px;
+  border: 1px solid rgba(207, 168, 89, 0.2);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #cfa859;
+}

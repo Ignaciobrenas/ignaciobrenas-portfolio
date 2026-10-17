@@ -1,6 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { FiArrowUp, FiGithub, FiLinkedin, FiMail } from 'react-icons/fi'
+import { FiArrowUp, FiGithub, FiLinkedin, FiMail, FiAward } from 'react-icons/fi'
 
 export const Footer: React.FC = () => {
   const { t } = useTranslation()
@@ -57,6 +57,15 @@ export const Footer: React.FC = () => {
               title="LinkedIn"
             >
               <FiLinkedin size={16} />
+            </a>
+            <a
+              href="https://www.credly.com/users/ignacio-brenas-munoz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-lg bg-white/5 border border-white/10 hover:text-amber-400 hover:border-amber-400 transition-colors"
+              title="Credly"
+            >
+              <FiAward size={16} />
             </a>
             <a
               href="mailto:ignaciobrenas@gmail.com"

@@ -1,208 +1,267 @@
 {
-  "splash": {
-    "errorCode": "404",
-    "errorTitle": "ERROR DE SISTEMA: ACCESO NO AUTORIZADO",
-    "subtitle": "> Inicializando protocolo de bypass... Decodificando perfil de Ignacio Breñas.",
-    "pressAnyKey": "Haz clic o presiona cualquier tecla para ingresar al sistema",
-    "skip": "Saltar intro",
-    "rebooting": "SISTEMA DESBLOQUEADO - CARGANDO KERNEL..."
-  },
   "nav": {
-    "home": "Inicio",
-    "about": "Sobre Mí",
+    "brandSubtitle": "PERFORMATIVE DEV",
     "experience": "Experiencia",
-    "education": "Formación",
-    "techStack": "Stack 3D",
-    "projects": "Proyectos",
-    "academic": "Académicos",
-    "contact": "Contacto",
-    "downloadCV": "Descargar CV",
-    "lang": "ES"
+    "work": "Proyectos",
+    "ai": "IA & Sistemas",
+    "stack": "Stack",
+    "certifications": "Certificaciones",
+    "about": "Sobre Mí",
+    "contactCTA": "Hablemos",
+    "langToggle": "Cambiar idioma / Switch language"
   },
-  "hero": {
-    "badge": "DISPONIBLE PARA NUEVOS RETOS",
-    "greeting": "Hola, soy",
+  "cover": {
+    "statusActive": "DISPONIBLE · BARCELONA",
+    "statusSubtitle": "STUCOM DAW · SOTERGUARD INTERN",
+    "handGreeting": "hola, soy",
     "name": "Ignacio Breñas Muñoz",
-    "role": "Desarrollador de Software & Estudiante DAW",
-    "description": "Especializado en TypeScript, Node.js y ecosistemas Full-Stack. Experiencia real en arquitecturas cliente-servidor, APIs RESTful, bases de datos optimizadas e infraestructura virtualizada.",
-    "badges": {
-      "typescript": "TypeScript & Node.js",
-      "intern": "Intern @ Soterguard",
-      "fullstack": "Full-Stack & On-Premise",
-      "systems": "Docker & Linux SysAdmin"
-    },
-    "viewProjects": "Explorar Proyectos",
-    "contactMe": "Contactar",
-    "scrollDown": "Desliza para explorar"
+    "role": "Desarrollador de Software",
+    "roleLocation": "en Barcelona",
+    "bio": "Construyo arquitecturas backend de alta fiabilidad, APIs limpias e integraciones seguras con agentes de IA mediante Model Context Protocol (MCP) y entornos virtualizados en Docker.",
+    "openPortfolio": "Abrir el portfolio",
+    "contact": "Contactar",
+    "cv": "CV.PDF",
+    "badgeSoterguard": "Software Dev Intern · Soterguard",
+    "badgeDaw": "DAW · STUCOM Pelai (2º Año)",
+    "badgeLangs": "Castellano · Català · English",
+    "badgeUnita": "UNITA Erasmus+ BIP · STUCOM",
+    "scrollCue": "Desliza para explorar mi trabajo"
   },
-  "about": {
-    "badge": "PERFIL PROFESIONAL",
-    "title": "Sobre Mí",
-    "lead": "Desarrollador de Software enfocado en TypeScript y estudiante de DAW afincado en Barcelona (disponible para Barcelona y alrededores).",
-    "bio1": "Cuento con una sólida base técnica adquirida tanto en mi formación académica (CFGS en Desarrollo de Aplicaciones Web y CFGM en Sistemas Microinformáticos y Redes en STUCOM Pelai) como en experiencias profesionales prácticas en entornos de producción.",
-    "bio2": "Mi perfil técnico combina el desarrollo web full-stack centrado en TypeScript y Node.js, el diseño de APIs robustas, la gestión y analítica de datos y el despliegue de infraestructuras virtualizadas (Docker, contenedores LXC, WSL y entornos Linux).",
-    "bio3": "Me considero una persona proactiva, resolutiva y con gran capacidad de adaptación, habituada a trabajar bajo metodologías Agile y motivada por aportar valor en proyectos reales y dinámicos.",
-    "stats": {
-      "experienceYears": "2+",
-      "experienceLabel": "Años de experiencia práctica",
-      "repos": "30+",
-      "reposLabel": "Repositorios de código",
-      "academicRate": "100%",
-      "academicLabel": "Compromiso y calidad"
-    },
-    "softSkillsTitle": "Habilidades Blandas",
-    "softSkills": {
-      "leadership": "Liderazgo",
-      "organization": "Organización",
-      "problemSolving": "Resolución de Problemas",
-      "teamwork": "Trabajo en Equipo",
-      "proactivity": "Proactividad"
-    },
-    "languagesTitle": "Idiomas",
-    "languages": {
-      "spanish": "Castellano (Nativo)",
-      "english": "Inglés (Técnico / Profesional)"
-    },
-    "infoTitle": "Detalles Rápidos",
-    "location": "Barcelona, España (Disponible para Barcelona y alrededores)",
-    "email": "ignaciobrenas@gmail.com",
-    "status": "Software Developer Intern @ Soterguard"
+  "spotlight": {
+    "badge": "CANALES DE INGENIERÍA PRINCIPALES",
+    "title": "Redes & Perfiles Oficiales",
+    "subtitle": "Acceso directo a mis repositorios de código, red profesional y certificaciones verificadas:",
+    "githubTitle": "GitHub",
+    "githubHandle": "@Ignaciobrenas",
+    "githubDesc": "30+ Repositorios públicos · Servidores MCP, sistemas de analítica y utilidades",
+    "githubBadge": "CÓDIGO ABIERTO",
+    "linkedinTitle": "LinkedIn",
+    "linkedinHandle": "Ignacio Breñas Muñoz",
+    "linkedinDesc": "Software Developer Intern @ Soterguard · Conexiones profesionales y trayectoria",
+    "linkedinBadge": "RED PROFESIONAL",
+    "credlyTitle": "Credly",
+    "credlyHandle": "ignacio-brenas-munoz",
+    "credlyDesc": "4 Insignias verificadas oficialmente por Cisco Networking Academy e IBM",
+    "credlyBadge": "VERIFICADO",
+    "viewProfile": "Abrir perfil oficial →"
   },
   "experience": {
-    "badge": "TRAYECTORIA LABORAL",
-    "title": "Experiencia Profesional",
+    "chapterNum": "01",
+    "chapterTitle": "Experiencia",
+    "chapterHand": "mi trayectoria profesional en proyectos y empresas reales",
+    "lead": "Mi experiencia en entornos de desarrollo backend en producción, laboratorios de hardware y realización técnica audiovisual.",
+    "visitWebsite": "Visitar web oficial →",
+    "nextChapter": "Capítulo 1 de 5 · Siguiente: Proyectos",
     "soterguard": {
       "role": "Software Developer Intern",
       "company": "Soterguard",
-      "period": "Mayo 2026 – Actualidad",
-      "location": "Barcelona / Remoto",
-      "bullet1": "Desarrollo, mantenimiento y despliegue de aplicaciones web y soluciones On-Premise para clientes bajo metodologías Agile.",
-      "bullet2": "Diseño e implementación de lógica de servidor y APIs RESTful utilizando Node.js, TypeScript y Python.",
-      "bullet3": "Gestión, modelado y optimización de bases de datos relacionales (PostgreSQL) con PrismaORM.",
-      "bullet4": "Configuración y aprovisionamiento de entornos virtualizados utilizando Docker, contenedores LXC y WSL."
+      "websiteDisplay": "soterguard.com",
+      "website": "https://soterguard.com/",
+      "type": "Entornos Web & Soluciones On-Premise",
+      "period": "Mayo 2026 – Actualidad · Barcelona · Híbrido",
+      "stamp": "ACTIVO · PRODUCCIÓN",
+      "stoamProject": "Stoam SaaS · Stoam Connect",
+      "stoamBadge": "B2B & B2C CONNECT",
+      "stoamDesc": "Participación activa en el ecosistema Stoam SaaS y en Stoam Connect, orquestando la sincronización de plataformas B2B y B2C mediante flujos complejos de automatización con n8n, APIs REST y webhooks.",
+      "bullets": [
+        "Participación activa en Stoam SaaS y especialmente en Stoam Connect, conectando plataformas B2B y B2C mediante el diseño e implementación de flujos complejos de n8n.",
+        "Desarrollo, mantenimiento y despliegue de aplicaciones web y soluciones On-Premise para clientes bajo metodologías Agile.",
+        "Diseño e implementación de lógica de servidor y APIs RESTful utilizando Node.js, TypeScript y Python.",
+        "Gestión y modelado de bases de datos relacionales PostgreSQL optimizadas con PrismaORM.",
+        "Configuración de entornos virtualizados utilizando Docker, contenedores LXC y WSL para aislamiento de servicios."
+      ],
+      "stack": "Node.js · TypeScript · n8n · PostgreSQL · PrismaORM · Docker · LXC · Python · Agile"
     },
     "vimtech": {
       "role": "Técnico Informático en Prácticas",
       "company": "VimTech",
-      "period": "Septiembre 2024 – Marzo 2025",
-      "location": "El Masnou, Barcelona",
-      "bullet1": "Diagnóstico, reparación de hardware y mantenimiento preventivo/correctivo de equipos, con alta especialización en dispositivos Apple.",
-      "bullet2": "Instalación y configuración de sistemas operativos (macOS, Windows, distribuciones Linux).",
-      "bullet3": "Asesoramiento tecnológico personalizado y resolución técnica de incidencias."
+      "websiteDisplay": "vimtech.es",
+      "website": "https://vimtech.es",
+      "type": "Laboratorio y Sistemas (vimtech.es)",
+      "period": "Septiembre 2024 – Marzo 2025 · El Masnou, Barcelona",
+      "stamp": "COMPLETADO",
+      "bullets": [
+        "Diagnóstico, reparación y mantenimiento preventivo y correctivo de equipos informáticos, con especialización en dispositivos Apple (Mac, iPhone, iPad).",
+        "Instalación, configuración y auditoría de sistemas operativos (macOS, Windows, distribuciones Linux Debian/Ubuntu).",
+        "Resolución de averías a nivel de microcomponentes, recuperación de datos y asesoramiento tecnológico personalizado al cliente."
+      ],
+      "stack": "macOS · Apple Tech · Linux SysAdmin · Hardware QA · Diagnóstico Microcomponente"
     },
     "ajma": {
-      "role": "Voluntariado (Técnico y Web)",
-      "company": "AJMA",
-      "period": "Marzo 2023 – Agosto 2025",
-      "location": "Barcelona",
-      "bullet1": "Diseño, administración y mantenimiento continuo de la página web oficial de la asociación.",
-      "bullet2": "Soporte informático integral de equipos y asistencia técnica audiovisual (cámara y sonido) en eventos."
+      "role": "Operador de Cámara & Soporte Audiovisual",
+      "company": "AJMA | Associació Juvenil de Mitjans Audiovisuals",
+      "websiteDisplay": "ajma.es",
+      "website": "https://ajma.es",
+      "period": "Marzo 2023 – Agosto 2025 · Barcelona · ajma.es",
+      "stamp": "CÁMARA & AUDIOVISUAL",
+      "quote": "«Associació juvenil dedicada a impulsar la creativitat audiovisual, la formació i els projectes col·laboratius entre joves creadors.»",
+      "bullets": [
+        "Operación de cámaras de vídeo profesionales y realización técnica audiovisual en directo en eventos culturales y juveniles.",
+        "Coordinación técnica de retransmisiones en streaming en directo, conexionado de señales de vídeo y mesas de mezclas de sonido.",
+        "Diseño y mantenimiento continuo de la página web oficial de la asociación (ajma.es)."
+      ],
+      "stack": "Operación de Cámara · Realización en Directo · Streaming · Mesas de Sonido · ajma.es"
     }
   },
-  "education": {
-    "badge": "FORMACIÓN ACADÉMICA",
-    "title": "Estudios y Titulaciones",
-    "daw": {
-      "degree": "CFGS en Desarrollo de Aplicaciones Web (DAW)",
-      "center": "Centro de Estudios STUCOM Pelai",
-      "period": "2025 – 2027",
-      "location": "Barcelona",
-      "description": "Especialización avanzada en desarrollo web full-stack, frameworks modernos (React, Angular, Symfony, Laravel), arquitectura cliente-servidor, seguridad web y diseño de bases de datos relacionales."
-    },
-    "smr": {
-      "degree": "CFGM en Sistemas Microinformáticos y Redes (SMR)",
-      "center": "Centro de Estudios STUCOM Pelai",
-      "period": "2023 – 2025",
-      "location": "Barcelona",
-      "description": "Formación integral en administración de redes de área local, configuración de servidores Windows y Linux, virtualización, montaje y soporte técnico de hardware y políticas de seguridad."
+  "work": {
+    "chapterNum": "02",
+    "chapterTitle": "Proyectos Seleccionados",
+    "chapterHand": "proyectos propios que resuelven problemas reales",
+    "lead": "Una selección de proyectos personales y académicos donde diseño software con rigor: arquitectura CRM & ERP modular, detección de fraude en Big Data, herramientas de IA y visión artificial.",
+    "viewCode": "Ver código en GitHub →",
+    "nextChapter": "Capítulo 2 de 5 · Siguiente: Stack Tecnológico",
+    "projects": {
+      "damaCrm": {
+        "title": "DAMA-CRM — CRM & ERP Modular de Alto Rendimiento",
+        "context": "Enterprise SaaS · Multi-Tenant Real · 11 Idiomas",
+        "stamp": "PROYECTO TOP",
+        "desc": "CRM y ERP modular self-hosted para PYMES y empresas. Multi-tenant real con aislamiento por subdominio, facturación legal ISO 19005-1 (PDF/A-3b y firma digital pública por token), calendario con sincronización bidireccional Apple Calendar (webcal://) y Google Calendar, pipeline de ventas Kanban drag & drop, 2FA OTP, RBAC y soporte multi-idioma con paridad total en 11 idiomas. Desarrollado con tipado 100% estricto en TypeScript y más de 116 tests automatizados pasando."
+      },
+      "argusFraud": {
+        "title": "Argus Fraud Radar",
+        "context": "UNITA Erasmus+ BIP · Proyecto Académico STUCOM",
+        "stamp": "ERASMUS+ BIP",
+        "desc": "Plataforma de detección y análisis de fraude financiero sobre Arquitectura Medallion (Bronze, Silver, Gold), desarrollada como proyecto académico para el programa europeo UNITA Erasmus+ BIP en STUCOM Pelai. Procesa millones de registros con PySpark, inferencia predictiva en tiempo real (<15ms) con LightGBM y dashboard interactivo en FastAPI y Streamlit."
+      },
+      "canvaMcp": {
+        "title": "Canva Connector MCP",
+        "context": "Model Context Protocol (MCP) · AI Agents",
+        "stamp": "AI PROTOCOL",
+        "desc": "Servidor local autónomo que implementa el protocolo MCP de Anthropic para conectar asistentes de IA (como Claude o Cursor) directamente con la API de Canva. Incorpora autenticación segura OAuth 2.0 PKCE local sin fuga de tokens y herramientas tipadas con esquemas deterministas Zod."
+      },
+      "skeletonMeme": {
+        "title": "Skeleton-Meme Tool",
+        "context": "Computer Vision · Rendimiento sobre CPU",
+        "stamp": "60 FPS CPU",
+        "desc": "Herramienta de visión artificial en tiempo real que procesa puntos biométricos con MediaPipe Face Mesh y OpenCV para alertar de fatiga postural y animar interacciones a 60 FPS estables corriendo sobre CPU estándar sin sobrecargar la tarjeta gráfica."
+      },
+      "runAndEat": {
+        "title": "RunAndEat 2.0.0",
+        "context": "Full-Stack Web · Laravel 11 & Vue.js SPA",
+        "stamp": "V2.0 STABLE",
+        "desc": "Sistema integral de gestión de reservas gastronómicas y eventos urbanos de alta interacción, construido con backend estructurado en Laravel 11, SPA reactiva en Vue.js y empaquetado optimizado con Vite y Tailwind CSS."
+      },
+      "lugiaTerminal": {
+        "title": "Lugia Terminal Setup",
+        "context": "Dev Tooling · CLI Profiling",
+        "stamp": "<10ms BOOT",
+        "desc": "Entorno de consola cyberpunk neón para PowerShell 7 y Windows Terminal con optimización minuciosa del tiempo de arranque de módulos (<10ms), autocompletado predictivo y conjunto de aliases para máxima productividad."
+      }
     }
   },
-  "techStack": {
-    "badge": "TECNOLOGÍAS & HERRAMIENTAS",
-    "title": "Stack Tecnológico 3D",
-    "subtitle": "Explora mi ecosistema interactivo en 3D. Rota, haz zoom o pasa el cursor sobre cada nodo orbital para descubrir cómo lo aplico.",
-    "interactiveHint": "Arrastra para orbitar en 3D · Rueda para hacer Zoom",
-    "tabs": {
-      "all": "Todos",
-      "languages": "Lenguajes",
-      "frameworks": "Frameworks",
-      "database": "Bases de Datos",
-      "infra": "Infraestructura & DevOps",
-      "ai": "IA & Datos"
+  "stack": {
+    "chapterNum": "03",
+    "chapterTitle": "Stack Tecnológico",
+    "chapterHand": "cada herramienta con su icono oficial, color de marca y rol",
+    "lead": "Herramientas que domino y utilizo en producción: desde backend transaccional con Node.js y PostgreSQL hasta virtualización en contenedores Linux y servidores MCP de IA.",
+    "nextChapter": "Capítulo 3 de 5 · Siguiente: Certificaciones",
+    "categories": {
+      "languages": "Lenguajes & Tipado",
+      "frontend": "Frontend & Reactivo",
+      "backend": "Backend & Servicios",
+      "databases": "Bases de Datos & ORMs",
+      "devops": "DevOps, Infra & Seguridad"
     }
   },
-  "projects": {
-    "badge": "PORTFOLIO & TRABAJOS",
-    "title": "Proyectos Personales",
-    "subtitle": "Desarrollos independientes centrados en inteligencia artificial, integraciones de vanguardia, full-stack y visión artificial.",
-    "viewCode": "Código en GitHub",
-    "liveDemo": "Ver Demo",
-    "canvaMCP": {
-      "title": "Canva Connector MCP",
-      "desc": "Conector inteligente que implementa Model Context Protocol (MCP) y Canva Connect API con OAuth 2.0 PKCE, permitiendo a agentes de IA generar y manipular presentaciones de forma autónoma."
-    },
-    "argusFraud": {
-      "title": "Argus Fraud Radar",
-      "desc": "Plataforma empresarial de detección de fraude bancario en tiempo real desarrollada con PySpark, Arquitectura Medallion, LightGBM, FastAPI y Streamlit. Proyecto galardonado en UNITA Erasmus+ BIP."
-    },
-    "skeletonMeme": {
-      "title": "Skeleton-Meme Productivity Tool",
-      "desc": "Herramienta de productividad mediante visión por computador utilizando MediaPipe Face Mesh y OpenCV en Python para alertar y prevenir fatiga y distracciones frente a la pantalla."
-    },
-    "runAndEat2": {
-      "title": "RunAndEat 2.0.0",
-      "desc": "Plataforma integral para reservas gastronómicas y gestión de eventos urbanos con arquitectura moderna en Laravel 11, Vue.js, Tailwind CSS y Vite."
-    },
-    "damaCrm": {
-      "title": "DAMA-CRM",
-      "desc": "Sistema de gestión de relaciones con clientes (CRM) empresarial desarrollado con TypeScript, interfaces reactivas y control de flujo de datos estructurado."
-    },
-    "lugiaTerminal": {
-      "title": "Lugia Terminal Setup",
-      "desc": "Entorno definitivo de desarrollo cyberpunk neón con temática de Lugia para Windows Terminal, PowerShell y herramientas avanzadas de productividad en consola."
-    },
-    "portfolioOld": {
-      "title": "Portfolio Web Glassmorphism",
-      "desc": "Sitio web de portfolio previo desarrollado con estética Glassmorphism moderna, HTML5 semántico, CSS3 avanzado y JavaScript vainilla desplegado en Vercel."
-    }
+  "certifications": {
+    "chapterNum": "04",
+    "chapterTitle": "Certificaciones Oficiales",
+    "chapterHand": "expedidas por Cisco e IBM, verificables en Credly",
+    "lead": "Credenciales oficiales que acreditan conocimientos avanzados en hacking ético, ciberseguridad defensiva, ciencia de datos y metodologías Agile de entrega continua.",
+    "viewOnCredly": "Ver en Credly",
+    "copyId": "Copiar ID",
+    "copied": "¡Copiado!",
+    "visitCredlyProfile": "Ver perfil oficial en Credly →",
+    "issuerCisco": "Cisco Networking Academy",
+    "issuerIbm": "IBM SkillsBuild",
+    "badgeEthicalHacker": "Cisco Ethical Hacker",
+    "badgeEthicalHackerDesc": "Auditorías de penetración, análisis de vulnerabilidades y seguridad en redes y sistemas operativos.",
+    "badgeAgile": "IBM Agile Explorer",
+    "badgeAgileDesc": "Metodologías ágiles Scrum/Kanban, iteraciones de entrega continua y gestión de backlog.",
+    "badgeCybersecurity": "Cisco Introduction to Cybersecurity",
+    "badgeCybersecurityDesc": "Fundamentos de defensa perimetral, criptografía simétrica/asimétrica y políticas de seguridad.",
+    "badgeDataScience": "Cisco Introduction to Data Science",
+    "badgeDataScienceDesc": "Análisis estadístico, minería de datos, pipelines predictivos y modelado exploratorio.",
+    "nextChapter": "Capítulo 4 de 5 · Siguiente: Sobre Mí"
   },
-  "academic": {
-    "badge": "STUCOM PELAI · PROYECTOS ACADÉMICOS",
-    "title": "Proyectos Académicos",
-    "subtitle": "Más de 20 proyectos estructurados realizados durante mi formación en DAW y SMR, aplicando POO, patrones de diseño (DAO, Strategy, MVC), TDD y testing.",
-    "filterAll": "Todos",
-    "filterJava": "Java & POO",
-    "filterPhp": "PHP & Backend",
-    "filterQa": "QA & Debugging",
-    "filterWeb": "Desarrollo Web",
-    "searchPlaceholder": "Buscar proyecto académico...",
-    "viewRepo": "Repositorio"
+  "about": {
+    "chapterNum": "05",
+    "chapterTitle": "Sobre Mí",
+    "chapterHand": "la versión honesta, sin retórica vacía",
+    "leadTitle": "Construyendo y testeando sistemas antes de que la teoría llegue a clase.",
+    "bio1": "Empecé a programar mucho antes de que el temario oficial llegara allí: mientras en clase se explicaba la teoría básica, yo ya había roto, investigado y reconstruido la práctica en casa. Aprendí a leer la documentación oficial de arriba a abajo, a medir con profilers de latencia y a no dar por válida ninguna solución hasta que ha pasado pruebas de integración reales.",
+    "bio2": "Actualmente curso el 2º año del CFGS en Desarrollo de Aplicaciones Web (DAW) en STUCOM Pelai, tras haberme graduado en el CFGM de Sistemas Microinformáticos y Redes (SMR). Trabajo como Software Developer Intern en Soterguard, desarrollando arquitecturas web y On-Premise en entornos de producción con Docker, TypeScript y PostgreSQL.",
+    "bio3": "Los modelos de lenguaje generan una gran parte de las pulsaciones de teclado. El 10% restante es el núcleo del oficio de la ingeniería: acotar el problema con rigor, diseñar esquemas de datos inmutables, depurar lo que la IA alucina y comprender al 100% cada línea de código que entra en main.",
+    "locationTitle": "ubicación",
+    "locationValue": "Barcelona, España",
+    "locationSub": "Presencial · Híbrido · Remoto",
+    "languagesTitle": "idiomas",
+    "languagesValue": "Castellano · Català",
+    "languagesSub": "English (Technical / Professional)",
+    "availabilityTitle": "disponibilidad",
+    "availabilityValue": "Proyectos de Alto Impacto",
+    "availabilitySub": "Software Development & Systems",
+    "academicTitle": "Formación Académica Oficial",
+    "academicHand": "centro de estudios STUCOM Pelai · Barcelona",
+    "dawDegree": "CFGS en Desarrollo de Aplicaciones Web (DAW)",
+    "dawSchool": "Centro de estudios STUCOM Pelai (Barcelona)",
+    "dawPeriod": "2025 – 2027 · En curso (2º año)",
+    "smxDegree": "CFGM en Sistemas Microinformáticos y Redes (SMX / SMR)",
+    "smxSchool": "Centro de estudios STUCOM Pelai (Barcelona)",
+    "smxPeriod": "2023 – 2025 · Graduado",
+    "phoneLabel": "Teléfono Directo",
+    "phoneValue": "+34 640 770 380",
+    "mobilityLabel": "Movilidad & Desplazamientos",
+    "mobilityValue": "Transporte público regular por Barcelona · Preparando carnet de conducir (B)",
+    "servicesTitle": "Lo que puedo aportar a tu equipo",
+    "servicesHand": "elige un servicio",
+    "service1Title": "APIs y Servicios Backend de Latencia Mínima",
+    "service1Desc": "Arquitecturas robustas en TypeScript y Node.js con bases de datos relacionales PostgreSQL optimizadas, modelado con PrismaORM y contratos de datos seguros sin cuellos de botella.",
+    "service1CTA": "Solicitar propuesta",
+    "service2Title": "Integraciones de IA & Servidores Model Context Protocol (MCP)",
+    "service2Desc": "Conecto tus herramientas y APIs internas a agentes autónomos de IA mediante servidores MCP con autenticación segura OAuth 2.0 PKCE, garantizando respuestas deterministas sin alucinaciones.",
+    "service2CTA": "Evaluar viabilidad",
+    "service3Title": "Infraestructura Virtualizada (Docker/LXC) & Testing Automatizado",
+    "service3Desc": "Aprovisionamiento de entornos aislados y arneses de tests con Vitest y Playwright. Cero sorpresas en producción: cada cambio se verifica contra la verdad empírica antes de fusionarse.",
+    "service3CTA": "Auditoría técnica",
+    "nextChapter": "Capítulo 5 de 5 · Siguiente: Contacto"
   },
   "contact": {
-    "badge": "HABLEMOS",
-    "title": "Contacto & Colaboración",
-    "subtitle": "¿Tienes una oportunidad profesional, un proyecto innovador o una consulta técnica? Envíame un mensaje y te responderé a la brevedad.",
-    "form": {
-      "name": "Nombre completo",
-      "namePlaceholder": "Ej. Juan Pérez",
-      "email": "Correo electrónico",
-      "emailPlaceholder": "juan@empresa.com",
-      "subject": "Asunto",
-      "subjectPlaceholder": "Propuesta de proyecto / Oportunidad laboral",
-      "message": "Mensaje",
-      "messagePlaceholder": "Describe brevemente tu consulta o propuesta...",
-      "send": "Enviar Mensaje",
-      "sending": "Transmitiendo datos...",
-      "success": "¡Mensaje transmitido con éxito! Te responderé pronto.",
-      "error": "Error al enviar el mensaje. Puedes escribirme directamente a ignaciobrenas@gmail.com."
-    },
-    "directContact": "Canales Directos",
-    "downloadCVButton": "Descargar Currículum Vitae (PDF)"
+    "handGreeting": "conexión directa sin rodeos",
+    "title": "Hablemos.",
+    "lead": "Barcelona — disponible para incorporaciones, proyectos de alto impacto y colaboraciones técnicas (presencial, híbrido o remoto). Contacta conmigo con un clic a través de tu servicio de correo preferido:",
+    "fastReply": "Habitualmente respondo en menos de 24 horas",
+    "gmailTitle": "Abrir en Gmail",
+    "gmailSub": "Redactar directamente en web",
+    "gmailBadge": "GMAIL WEB",
+    "outlookTitle": "Abrir en Outlook",
+    "outlookSub": "Redactar directamente en web",
+    "outlookBadge": "OUTLOOK LIVE",
+    "mailtoTitle": "Cliente de correo local",
+    "mailtoSub": "Apple Mail, Thunderbird, etc.",
+    "copyEmail": "Haz clic para copiar la dirección",
+    "copiedEmail": "¡Copiado al portapapeles!",
+    "copyBadge": "COPIAR",
+    "copiedBadge": "OK",
+    "socialTitle": "Perfiles Profesionales Oficiales",
+    "downloadCV": "Descargar CV Completo (PDF)"
+  },
+  "telemetry": {
+    "title": "NÚCLEO TELEMETRÍA 3D",
+    "subtitle": "WEBGL COMPUTE ENGINE",
+    "fps": "FPS",
+    "delta": "LATENCIA",
+    "ticks": "TICKS",
+    "turbo": "TURBO BOOST",
+    "matrix": "MATRIZ WIREFRAME",
+    "benchmark": "STRESS TEST CPU",
+    "statusActive": "SISTEMA ACTIVO",
+    "statusTurbo": "TURBO MÁXIMO",
+    "statusWireframe": "MODO MATRIZ"
   },
   "footer": {
-    "rights": "Todos los derechos reservados.",
-    "builtWith": "Desarrollado con React 19, TypeScript, Three.js y Tailwind CSS.",
-    "systemStatus": "STATUS: ONLINE · KERNEL 2.6.4 · LATENCY 12ms",
-    "backToTop": "Volver arriba"
+    "tagline": "Performative Software Developer · Barcelona",
+    "rights": "Código abierto con pasión por el rendimiento y la latencia cero.",
+    "backToTop": "Volver arriba ↑"
   }
 }

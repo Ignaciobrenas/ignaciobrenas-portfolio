@@ -179,7 +179,7 @@ export const TechOrbitalScene: React.FC<TechOrbitalSceneProps> = ({
       </div>
 
       <div className="absolute bottom-4 left-4 right-4 pointer-events-none z-10 text-center font-mono text-xs text-gray-400 bg-black/60 backdrop-blur-md py-1.5 px-3 rounded-lg border border-white/5 mx-auto max-w-md">
-        🖱️ Rota arrastrando · 🔍 Zoom con rueda · Clic en cualquier nodo para inspeccionar
+        Rota arrastrando · Zoom con rueda · Clic en cualquier nodo para inspeccionar
       </div>
     </div>
   )

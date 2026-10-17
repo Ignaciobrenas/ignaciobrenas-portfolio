@@ -1,147 +1,199 @@
 <div align="center">
 
-  <img src="public/images/logo.png" alt="Ignacio Breñas Monograma" width="90" />
+  <img src="public/images/sprites/ignacio_wave.png" alt="Ignacio Breñas — 32-Bit Interactive Sprite" width="120" style="image-rendering: pixelated; filter: drop-shadow(0 10px 25px rgba(16,185,129,0.35));" />
 
   # IGNACIO BREÑAS MUÑOZ
-  ### MUSEO DE ARTE & INGENIERÍA DE SOFTWARE
-  **Arquitectura de Sistemas · Ecosistema Full-Stack · Óleo sobre Lienzo**
-  
-  *Barcelona, España · Disponible para Barcelona y alrededores (Presencial / Híbrido / Remoto)*
+  ### SOFTWARE DEVELOPER // PERFORMATIVE ARCHITECTURE
+
+  **TypeScript Estricto · Arquitectura Modular SaaS · Docker & Linux · Barcelona**
 
   <br />
 
-  [![Astro](https://img.shields.io/badge/Astro-5.0_%E2%80%94_Islands-040a06?style=for-the-badge&logo=astro&logoColor=f6ebd0&labelColor=0d2818&color=cfa859)](https://astro.build)
-  [![TypeScript](https://img.shields.io/badge/TypeScript-Strict_Architecture-040a06?style=for-the-badge&logo=typescript&logoColor=f6ebd0&labelColor=0d2818&color=cfa859)](https://www.typescriptlang.org/)
-  [![Node.js](https://img.shields.io/badge/Node.js-REST_APIs-040a06?style=for-the-badge&logo=node.js&logoColor=f6ebd0&labelColor=0d2818&color=cfa859)](https://nodejs.org/)
-  [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4_Emerald_&_Gold-040a06?style=for-the-badge&logo=tailwindcss&logoColor=f6ebd0&labelColor=0d2818&color=cfa859)](https://tailwindcss.com/)
-  [![STUCOM](https://img.shields.io/badge/STUCOM_Pelai-DAW_%26_SMR-040a06?style=for-the-badge&logoColor=f6ebd0&labelColor=0d2818&color=cfa859)](https://stucom.com/)
+  [![Astro](https://img.shields.io/badge/Astro-5.x-040a06?style=for-the-badge&logo=astro&logoColor=10b981&labelColor=06170d&color=10b981)](https://astro.build)
+  [![React](https://img.shields.io/badge/React-19.x-040a06?style=for-the-badge&logo=react&logoColor=61dafb&labelColor=06170d&color=61dafb)](https://react.dev)
+  [![TypeScript](https://img.shields.io/badge/TypeScript-100%25_Strict-040a06?style=for-the-badge&logo=typescript&logoColor=3178c6&labelColor=06170d&color=3178c6)](https://www.typescriptlang.org/)
+  [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4_Emerald-040a06?style=for-the-badge&logo=tailwindcss&logoColor=38bdf8&labelColor=06170d&color=10b981)](https://tailwindcss.com/)
+  [![Credly](https://img.shields.io/badge/Credly-Verified_Badges-040a06?style=for-the-badge&logo=credly&logoColor=ff6b00&labelColor=06170d&color=ff6b00)](https://www.credly.com/users/ignacio-brenas-munoz)
+  [![Zero Emojis](https://img.shields.io/badge/Policy-Zero_Emojis-040a06?style=for-the-badge&logoColor=10b981&labelColor=06170d&color=10b981)](https://github.com/Ignaciobrenas)
+  [![License](https://img.shields.io/badge/License-MIT-040a06?style=for-the-badge&logoColor=ffffff&labelColor=06170d&color=ffffff)](LICENSE)
 
   <br />
 
-  <!-- Direct Hiring Badges -->
-  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ignaciobrenas@gmail.com&su=Propuesta%20de%20Contrataci%C3%B3n%20/%20Proyecto%20-%20Ignacio%20Bre%C3%B1as&body=Hola%20Ignacio,%0A%0AHe%20visto%20tu%20portfolio%20y%20nos%20gustar%C3%ADa%20conversar%20sobre%20una%20oportunidad%20profesional%20en%20nuestro%20equipo..."><img src="https://img.shields.io/badge/Contratar_v%C3%ADa-GMAIL-ea4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Contratar vía Gmail" /></a>
-  <a href="https://outlook.live.com/mail/0/deeplink/compose?to=ignaciobrenas@gmail.com&subject=Propuesta%20de%20Contrataci%C3%B3n%20/%20Proyecto%20-%20Ignacio%20Bre%C3%B1as&body=Hola%20Ignacio,%0A%0AHe%20visto%20tu%20portfolio%20y%20nos%20gustar%C3%ADa%20conversar%20sobre%20una%20oportunidad%20profesional%20en%20nuestro%20equipo..."><img src="https://img.shields.io/badge/Contratar_v%C3%ADa-OUTLOOK-0078d4?style=for-the-badge&logo=microsoft-outlook&logoColor=white" alt="Contratar vía Outlook" /></a>
-  <a href="public/CV_IgnacioBrenas.pdf"><img src="https://img.shields.io/badge/Curriculum_Vitae-DESCARGAR_PDF-cfa859?style=for-the-badge&logoColor=040a06&color=cfa859" alt="Descargar CV" /></a>
-
-  <br /><br />
-
-  <img src="public/images/logo-oil.png" alt="Obra de Arte al Óleo - Monograma IB por Ignacio Breñas" width="420" style="border: 2px solid #cfa859; border-radius: 8px; box-shadow: 0 15px 40px rgba(0,0,0,0.8);" />
-  
-  <p><em>«La precisión del código. El alma del lienzo al óleo.»</em></p>
+  <!-- Action Badges -->
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ignaciobrenas@gmail.com&su=Contacto%20Profesional%20-%20Ignacio%20Bre%C3%B1as"><img src="https://img.shields.io/badge/Gmail-ignaciobrenas%40gmail.com-ea4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail" /></a>
+  <a href="https://www.linkedin.com/in/ignacio-brenas-mu%C3%B1oz-65a88a297/"><img src="https://img.shields.io/badge/LinkedIn-Ignacio_Bre%C3%B1as-0077b5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="https://github.com/Ignaciobrenas"><img src="https://img.shields.io/badge/GitHub-30%2B_Repos-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+  <a href="public/cv.pdf"><img src="https://img.shields.io/badge/Curriculum_Vitae-PDF_Oficial-10b981?style=for-the-badge&logo=adobe-acrobat-reader&logoColor=white" alt="Descargar CV" /></a>
 
 </div>
 
 ---
 
-## 🏛️ El Manifiesto & La Visión Curatorial
+## // RESUMEN DEL SISTEMA
 
-Este repositorio alberga la experiencia interactiva concebida para presentar la trayectoria, principios de ingeniería y obras de software de **Ignacio Breñas Muñoz**. Desarrollada como una **galería de bellas artes de estilo renacentista contemporáneo**, en tonos verde bosque profundo (`#030805` / `#06120a`), acentos en oro viejo y latón pulido (`#cfa859`), e ilustraciones originales trabajadas al **óleo sobre lienzo con técnica de impasto matérico**.
+Portfolio interactivo de alto rendimiento con estética retro-moderna de 32 bits, motor de audio por síntesis Web Audio API en tiempo real, companion pixel-art reactivo al scroll y soporte bilingüe completo (ES/EN).
 
-### 📍 Ubicación & Disponibilidad
-* **Residencia**: Barcelona, España.
-* **Ámbito geográfico**: Disponible para posiciones en **Barcelona y alrededores**.
-* **Modalidad de trabajo**: Presencial, Híbrido o Remoto.
-* **Despacho electrónico**: [ignaciobrenas@gmail.com](mailto:ignaciobrenas@gmail.com)
-
----
-
-## 🖼️ Las Salas de Exposición
+Diseñado sin plantillas genéricas ni componentes prefabricados: cada módulo está construido con rigor de ingeniería, tipado estricto en TypeScript (cero tipos `any`) y verificación de diseño responsivo pixel-perfect en escritorio, tablet y móvil.
 
 ```
-MUSEO DE ARTE & INGENIERÍA // GUÍA DE SALAS
-├── FOYER PRINCIPAL      → El Lienzo al Óleo Central (Monograma IB Impasto 3D)
-├── SALA I · MANIFIESTO  → Monografía del Artesano & 7 Tesis Fundacionales
-├── SALA II · OBRAS      → Colección de Masterpieces al Óleo & Código Fuente
-├── SALA III · ATELIER   → Vitrinas de Instrumentos, Lenguajes & Ecosistemas
-├── SALA IV · TRAYECTORIA→ Anales de Experiencia Laboral (Soterguard, VimTech, AJMA)
-├── SALA V · ACADEMIA    → Diplomas STUCOM Pelai (DAW/SMR) & Archivo de 20+ Trabajos
-└── SALA VI · SALÓN      → Salón de Adquisiciones & Accesos Directos de Contratación
+ESTRUCTURA DEL PORTFOLIO // CAPÍTULOS
+├── 00 // PORTADA       → Identidad, pitch técnico y accesos directos
+├── SPOTLIGHT           → Hub de ingeniería: GitHub, LinkedIn y Credly
+├── 01 // EXPERIENCIA   → Soterguard (Stoam SaaS · n8n), VimTech, AJMA
+├── 02 // PROYECTOS     → DAMA-CRM (#1 Flagship), Argus Fraud Radar, Canva MCP...
+├── 03 // STACK         → Lenguajes, Frontend, Backend, Databases y DevOps
+├── 04 // CREDENCIALES  → Certificaciones oficiales Cisco Networking Academy & IBM
+├── 05 // SOBRE MÍ      → Formación STUCOM Pelai (DAW/SMX), movilidad y servicios
+└── CONTACTO            → Tarjeta interactiva "Hablemos", cliente mail y descarga de CV
 ```
 
 ---
 
-## 🎨 Obras Maestras al Óleo Destacadas
+## // PROYECTOS DESTACADOS
 
-| Obra al Óleo | Título & Descripción | Tecnologías & Médiums | Enlaces |
-| :--- | :--- | :--- | :--- |
-| <img src="public/images/art-canva-mcp.jpg" width="180" /> | **Canva Connector MCP**<br>Conector autónomo para agentes inteligentes mediante el protocolo MCP con OAuth 2.0 PKCE. | `Node.js` `Model Context Protocol` `OAuth 2.0` `Canva API` | [GitHub](https://github.com/Ignaciobrenas/canva-connector-mcp) |
-| <img src="public/images/art-argus-radar.jpg" width="180" /> | **Argus Fraud Radar**<br>Detección bancaria de fraude en tiempo real. Galardonado en el programa UNITA Erasmus+ BIP. | `PySpark` `Medallion Architecture` `LightGBM` `FastAPI` | [GitHub](https://github.com/Ignaciobrenas/Argus-Fraud-Radar) |
-| <img src="public/images/art-skeleton-vision.jpg" width="180" /> | **Skeleton-Meme Productivity**<br>Ergonomía y vigilancia postural no invasiva mediante Face Mesh de 468 puntos. | `Python` `MediaPipe` `OpenCV` `Computer Vision` | [GitHub](https://github.com/Ignaciobrenas/Skeleton-Meme) |
-| <img src="public/images/art-gastronomy.jpg" width="180" /> | **RunAndEat 2.0.0**<br>Plataforma para reservas gastronómicas y dinamización de eventos urbanos. | `Laravel 11` `Vue.js` `Tailwind CSS` `MySQL` | [GitHub](https://github.com/Ignaciobrenas/RunAndEat-2.0.0) |
-| <img src="public/images/dama.png" width="180" /> | **DAMA-CRM**<br>Sistema empresarial de gestión de oportunidades mercantiles con persistencia relacional estricta. | `TypeScript` `Node.js` `PostgreSQL` `PrismaORM` | [GitHub](https://github.com/Ignaciobrenas/DAMA-CRM) |
+### 1. DAMA-CRM — CRM & ERP Modular de Alto Rendimiento (PROYECTO TOP)
+- **Repositorio**: [`https://github.com/Ignaciobrenas/DAMA-CRM`](https://github.com/Ignaciobrenas/DAMA-CRM)
+- **Tecnologías**: TypeScript 5+ (100% Strict), React 18, Node.js, PostgreSQL, PrismaORM, Redis, Docker, Tailwind CSS.
+- **Puntos Clave**:
+  - Facturación legal conforme a la norma **ISO 19005-1 (PDF/A-3b)** para la AEAT con firma digital pública por token.
+  - Multi-tenancy real con aislamiento de datos por subdominio y control de acceso basado en roles (**RBAC**) con autenticación **2FA OTP**.
+  - Sincronización de calendario bidireccional nativa con Apple Calendar (`webcal://`) y Google Calendar.
+  - Pipeline de ventas Kanban drag & drop con reactividad en tiempo real.
+  - Cobertura de calidad con más de **116 tests automatizados pasando**.
 
----
+### 2. Argus Fraud Radar — Detección de Fraude en Tiempo Real
+- **Repositorio**: [`https://github.com/Ignaciobrenas/Argus-Fraud-Radar`](https://github.com/Ignaciobrenas/Argus-Fraud-Radar)
+- **Contexto**: Proyecto académico para el programa europeo **UNITA Erasmus+ BIP** en **STUCOM Pelai**.
+- **Tecnologías**: PySpark (Arquitectura Medallion: Bronze, Silver, Gold), LightGBM, FastAPI, Streamlit, Docker.
+- **Rendimiento**: Inferencia predictiva sub-15ms sobre millones de transacciones financieras con panel de radar interactivo.
 
-## 🧰 El Atelier Técnico
+### 3. Stoam SaaS & Stoam Connect (Soterguard)
+- **Contexto**: Software Developer Intern en **Soterguard** ([`soterguard.com`](https://soterguard.com/)).
+- **Contribución**: Participación activa en el ecosistema **Stoam SaaS**, concretamente en **Stoam Connect**, orquestando la integración de plataformas B2B y B2C mediante flujos complejos de automatización con **n8n**, APIs REST y webhooks.
+- **Infraestructura**: PostgreSQL con PrismaORM, microservicios aislados en Docker, contenedores LXC y WSL.
 
-### 1. Lenguajes Fundacionales
-* **TypeScript** — Tipado estricto, contratos de interfaces y arquitecturas escalables.
-* **JavaScript (ES6+)** — Programación asíncrona, event loops y microservicios.
-* **Node.js** — Servicios de backend, APIs RESTful de baja latencia y CLI tooling.
-* **Python** — Pipelines analíticos, procesamiento masivo y modelos de visión artificial.
-* **PHP 8.x** — Backend estricto en STUCOM, patrones Strategy y tests con PHPUnit.
-* **Java** — Principios de POO puros, patrón DAO, JDBC y concurrencia.
+### 4. Canva Connector MCP — AI Agent Protocol
+- **Repositorio**: [`https://github.com/Ignaciobrenas/canva-connector-mcp`](https://github.com/Ignaciobrenas/canva-connector-mcp)
+- **Estándar**: Implementación del **Model Context Protocol (MCP)** de Anthropic para asistentes como Claude o Cursor.
+- **Seguridad**: Flujo local autónomo **OAuth 2.0 PKCE** sin riesgo de fuga de credenciales y validación estricta de esquemas Zod.
 
-### 2. Marcos & Estructuras
-* **Astro** — Arquitectura de islas, rendimiento de carga estática ultrarrápida.
-* **React 18 / 19** — Componentes declarativos, hooks avanzados, estado.
-* **Three.js / WebGL** — Escenas interactivas 3D y renderizado en navegador.
-* **Laravel 11** — Arquitectura MVC enterprise, Eloquent ORM y autenticación.
-* **Symfony** — Framework robusto PHP, inyección modular de dependencias.
-
-### 3. Persistencia & Almacenamiento
-* **PostgreSQL** — Consultas relacionales complejas, índices, transacciones ACID.
-* **PrismaORM** — Modelado declarativo relacional y queries con type-safety estricto.
-* **MySQL** — Esquemas relacionales y procedimientos almacenados.
-
-### 4. Sistemas, Virtualización & DevOps
-* **Docker & Contenedores LXC** — Aislamiento de entornos y despliegues virtualizados.
-* **Linux SysAdmin & WSL** — Administración de servidores, automatizaciones Bash y políticas POSIX.
-* **Git & GitHub CI/CD** — Flujo de trabajo colaborativo GitFlow y auditoría de código.
+### 5. Skeleton-Meme Tool — Visión Artificial a 60 FPS sobre CPU
+- **Repositorio**: [`https://github.com/Ignaciobrenas/Skeleton-Meme`](https://github.com/Ignaciobrenas/Skeleton-Meme)
+- **Tecnologías**: OpenCV, MediaPipe Face Mesh, Python.
+- **Optimización**: Análisis de fatiga postural y animación dinámica a 60 FPS estables corriendo íntegramente sobre CPU estándar sin requerir GPU dedicada.
 
 ---
 
-## 📜 Formación & Acreditaciones STUCOM Pelai
+## // TRAYECTORIA PROFESIONAL
 
-* **CFGS en Desarrollo de Aplicaciones Web (DAW)** — STUCOM Pelai, Barcelona *(2025 – 2027)*
-* **CFGM en Sistemas Microinformáticos y Redes (SMR)** — STUCOM Pelai, Barcelona *(2023 – 2025)*
-* **Archivo Académico**: Más de 20 proyectos catalogados y auditados que aplican patrones de diseño arquitectónico (DAO, Strategy, MVC), refactorización de código defectuoso (QA) y tests unitarios.
+| Empresa / Entidad | Rol | Periodo | Especialidad |
+|---|---|---|---|
+| **Soterguard** | Software Developer Intern | Mayo 2026 – Actualidad | Backend en Node.js, TS y Python, Stoam SaaS, n8n, PostgreSQL, Prisma, Docker, LXC |
+| **VimTech** | Técnico Informático en Prácticas | Sep 2024 – Mar 2025 | Diagnóstico a nivel de componente Apple (Mac, iPhone, iPad), hardening de OS |
+| **AJMA** | Operador de Cámara & Soporte Audiovisual | Mar 2023 – Ago 2025 | Realización técnica de cámara en eventos, mesas de sonido y gestión web ajma.es |
 
 ---
 
-## ⚡ Instalación & Ejecución Local
+## // FORMACIÓN ACADÉMICA OFICIAL
+
+- **CFGS en Desarrollo de Aplicaciones Web (DAW)**: Centro de estudios STUCOM Pelai (Barcelona) · *2025 – 2027 (2º año en curso)*
+- **CFGM en Sistemas Microinformáticos y Redes (SMX / SMR)**: Centro de estudios STUCOM Pelai (Barcelona) · *2023 – 2025 (Graduado)*
+
+---
+
+## // CREDENCIALES VERIFICADAS EN CREDLY
+
+Perfil oficial: [`credly.com/users/ignacio-brenas-munoz`](https://www.credly.com/users/ignacio-brenas-munoz)
+
+- **Cisco Ethical Hacker** (`CISCO-ETH-HACKER-VERIFIED`): Auditorías de penetración, análisis de vulnerabilidades y defensa de hosts y redes.
+- **IBM Agile Explorer** (`IBM-AGILE-EXPLORER-VERIFIED`): Metodologías Scrum/Kanban y ciclos iterativos de entrega continua.
+- **Cisco Introduction to Cybersecurity** (`CISCO-CYBERSEC-INTRO-VERIFIED`): Criptografía, defensa perimetral y políticas de seguridad.
+- **Cisco Introduction to Data Science** (`CISCO-DATA-SCIENCE-VERIFIED`): Análisis estadístico, minería de datos y pipelines analíticos.
+
+---
+
+## // ARQUITECTURA TÉCNICA DEL REPOSITORIO
+
+```mermaid
+graph TD
+    A["Astro 5 Islands Kernel"] --> B["PerformativePortfolio Component"]
+    B --> C["Top Navbar (Responsiva + Lang Toggle)"]
+    B --> D["Left Stage (Capítulos 00 a 05 + Contacto)"]
+    B --> E["Right Sticky Stage (Companion 32-Bit)"]
+    B --> F["Mobile Corner Companion (Docked + Dismissible)"]
+    B --> G["IgnacioRetroChatModal (FAQ + Síntesis de Audio)"]
+    
+    E --> H["RetroDialogueBox (Punteros Pixel-Perfect)"]
+    E --> I["Web Audio Synth (Blips y Chimes Procedurales)"]
+    F --> H
+    G --> I
+```
+
+### Características de Implementación:
+- **Zero Emojis Policy**: Ningún emoji Unicode en la interfaz ni en el código; todo el soporte visual se realiza mediante iconos SVG oficiales optimizados de `lucide-react` y `react-icons`.
+- **Audio Sintetizado Procedural**: Efectos de sonido retro de 32 bits generados por código mediante osciladores nativos de la `Web Audio API` (onda cuadrada, filtros paso bajo y decaimiento exponencial), sin dependencias de ficheros MP3 pesados.
+- **Scrollspy Granular**: Detección milimétrica de elementos en viewport sincronizada con la pose y diálogo del personaje interactivo.
+- **Modo Responsive Integral**:
+  - En **ordenador (>1024px)**: Escenario sticky lateral con animaciones completas y diálogo interactivo.
+  - En **tablet y móvil (<1024px)**: Companion acoplado en esquina inferior derecha (`fixed bottom-4 right-3`) con botón de cierre (`✕`), minimizable a un avatar flotante con pulso esmeralda, y barra superior con scroll horizontal de pestañas.
+
+---
+
+## // GUÍA DE PUESTA EN MARCHA LOCAL
+
+### Requisitos Previos:
+- Node.js 18.x o superior
+- npm, pnpm o bun
+
+### Instalación y Ejecución:
 
 ```bash
 # 1. Clonar el repositorio
 git clone https://github.com/Ignaciobrenas/ignaciobrenas-portfolio.git
 
-# 2. Entrar al directorio
+# 2. Entrar en el directorio
 cd ignaciobrenas-portfolio
 
 # 3. Instalar dependencias
 npm install
 
-# 4. Iniciar el servidor de desarrollo en Astro
+# 4. Iniciar servidor de desarrollo en local
 npm run dev
+# Servidor disponible en http://localhost:4321/
 
-# 5. Compilar la versión de producción optimizada
+# 5. Compilar para producción (Build estático)
 npm run build
 
-# 6. Previsualizar la compilación de producción
+# 6. Previsualizar compilación de producción
 npm run preview
 ```
 
 ---
 
-## 📬 Canales Directos de Contratación
+## // AUDITORÍA DE SEGURIDAD
 
-* 📩 **Correo Electrónico**: [ignaciobrenas@gmail.com](mailto:ignaciobrenas@gmail.com)
-* 💼 **LinkedIn**: [linkedin.com/in/ignacio-brenas-munoz](https://linkedin.com/in/ignacio-brenas-munoz)
-* 🐙 **GitHub**: [github.com/Ignaciobrenas](https://github.com/Ignaciobrenas)
-* 📄 **Curriculum Vitae**: [Descargar CV Oficial en PDF](public/CV_IgnacioBrenas.pdf)
+- **Secret Scanning**: 0 credenciales, tokens o claves privadas filtradas en el repositorio.
+- **Dependency Audit**: 0 vulnerabilidades conocidas reportadas por `npm audit`.
+- **Cross-Site Scripting (XSS)**: Cero usos de `dangerouslySetInnerHTML`.
+- **Reverse Tabnabbing**: 100% de los enlaces externos con `target="_blank"` implementan `rel="noopener noreferrer"`.
+- **Environment Exclusions**: Reglas estrictas en `.gitignore` para bloquear ficheros `.env`, `.env.*` y artefactos temporales.
+
+---
+
+## // CONTACTO & DISPONIBILIDAD
+
+- **Ubicación**: Barcelona, España.
+- **Disponibilidad**: Incorporación inmediata para proyectos de ingeniería de software (Presencial, Híbrido o Remoto).
+- **Teléfono**: [+34 640 770 380](tel:+34640770380)
+- **Correo Directo**: [ignaciobrenas@gmail.com](mailto:ignaciobrenas@gmail.com)
+- **LinkedIn**: [linkedin.com/in/ignacio-brenas-muñoz](https://www.linkedin.com/in/ignacio-brenas-mu%C3%B1oz-65a88a297/)
+- **GitHub**: [github.com/Ignaciobrenas](https://github.com/Ignaciobrenas)
+- **Credly**: [credly.com/users/ignacio-brenas-munoz](https://www.credly.com/users/ignacio-brenas-munoz)
 
 ---
 
 <div align="center">
-  <sub>Diseñado y desarrollado por Ignacio Breñas Muñoz · © 2026 Todos los derechos reservados.</sub>
+  <p font-family="monospace">
+    <em>Ignacio Breñas Muñoz · Software Developer · Barcelona 2026</em>
+  </p>
 </div>

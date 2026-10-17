@@ -1,7 +1,27 @@
 {
   "name": "ignaciobrenas-portfolio",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Interactive retro-modern 32-bit portfolio showcasing high-performance software engineering, DAMA-CRM SaaS, backend systems, and verifiable credentials.",
+  "author": "Ignacio Breñas Muñoz <ignaciobrenas@gmail.com> (https://github.com/Ignaciobrenas)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ignaciobrenas/ignaciobrenas-portfolio.git"
+  },
+  "keywords": [
+    "portfolio",
+    "software-engineer",
+    "fullstack",
+    "backend",
+    "typescript",
+    "react",
+    "astro",
+    "retro-32bit",
+    "dama-crm",
+    "soterguard",
+    "barcelona"
+  ],
   "type": "module",
   "scripts": {
     "dev": "astro dev",

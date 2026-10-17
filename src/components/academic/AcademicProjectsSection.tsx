@@ -138,7 +138,7 @@ export const AcademicProjectsSection: React.FC = () => {
 
                 {project.highlights && (
                   <div className="text-[11px] font-mono text-emerald-400 bg-emerald-950/30 border border-emerald-500/20 px-2 py-1 rounded">
-                    ★ {project.highlights}
+                    {project.highlights}
                   </div>
                 )}
               </div>

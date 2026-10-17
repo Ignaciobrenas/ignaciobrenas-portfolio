@@ -9,7 +9,8 @@ import {
   FiCheckCircle, 
   FiDownload, 
   FiLinkedin, 
-  FiGithub 
+  FiGithub,
+  FiAward
 } from 'react-icons/fi'
 
 export const ContactSection: React.FC = () => {
@@ -109,24 +110,33 @@ export const ContactSection: React.FC = () => {
                 <span className="text-xs font-mono text-gray-400 uppercase tracking-wider block mb-3">
                   Perfiles Digitales:
                 </span>
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-3 gap-2">
                   <a
                     href="https://github.com/Ignaciobrenas"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 py-2.5 rounded-lg bg-black/60 border border-white/10 hover:border-cyan-400 text-xs font-mono text-gray-200 hover:text-white transition-all"
+                    className="flex items-center justify-center gap-1.5 py-2.5 rounded-lg bg-black/60 border border-white/10 hover:border-cyan-400 text-xs font-mono text-gray-200 hover:text-white transition-all"
                   >
-                    <FiGithub size={16} />
+                    <FiGithub size={15} />
                     <span>GitHub</span>
                   </a>
                   <a
                     href="https://www.linkedin.com/in/ignaciobrenas"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 py-2.5 rounded-lg bg-black/60 border border-white/10 hover:border-blue-400 text-xs font-mono text-gray-200 hover:text-white transition-all"
+                    className="flex items-center justify-center gap-1.5 py-2.5 rounded-lg bg-black/60 border border-white/10 hover:border-blue-400 text-xs font-mono text-gray-200 hover:text-white transition-all"
                   >
-                    <FiLinkedin size={16} />
+                    <FiLinkedin size={15} />
                     <span>LinkedIn</span>
+                  </a>
+                  <a
+                    href="https://www.credly.com/users/ignacio-brenas-munoz"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-1.5 py-2.5 rounded-lg bg-black/60 border border-white/10 hover:border-amber-500 text-xs font-mono text-gray-200 hover:text-amber-400 transition-all"
+                  >
+                    <FiAward size={15} className="text-amber-500" />
+                    <span>Credly</span>
                   </a>
                 </div>
               </div>

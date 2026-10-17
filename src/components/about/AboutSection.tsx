@@ -180,7 +180,7 @@ export const AboutSection: React.FC = () => {
               <div className="space-y-3 pt-1">
                 <div>
                   <div className="flex justify-between text-xs font-mono text-gray-300 mb-1">
-                    <span>🇪🇸 {t('about.languages.spanish')}</span>
+                    <span className="font-bold text-cyan-400">ES · {t('about.languages.spanish')}</span>
                     <span className="text-cyan-400">100%</span>
                   </div>
                   <div className="w-full h-1.5 bg-black/50 rounded-full overflow-hidden">
@@ -189,7 +189,7 @@ export const AboutSection: React.FC = () => {
                 </div>
                 <div>
                   <div className="flex justify-between text-xs font-mono text-gray-300 mb-1">
-                    <span>🇬🇧 {t('about.languages.english')}</span>
+                    <span className="font-bold text-emerald-400">EN · {t('about.languages.english')}</span>
                     <span className="text-emerald-400">80%</span>
                   </div>
                   <div className="w-full h-1.5 bg-black/50 rounded-full overflow-hidden">

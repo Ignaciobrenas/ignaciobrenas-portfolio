@@ -1,51 +1,12 @@
 ---
-import MuseumLayout from '../layouts/MuseumLayout.astro';
-import { MuseumNavbar } from '../components/museum/MuseumNavbar';
-import { HeroGallery } from '../components/museum/HeroGallery';
-import { ArtisanManifesto } from '../components/museum/ArtisanManifesto';
-import { GrandManifesto } from '../components/museum/GrandManifesto';
-import { ExhibitionMasterpieces } from '../components/museum/ExhibitionMasterpieces';
-import { AtelierInstruments } from '../components/museum/AtelierInstruments';
-import { CuratedProvenance } from '../components/museum/CuratedProvenance';
-import { AcademyDiplomas } from '../components/museum/AcademyDiplomas';
-import { AcquisitionSalon } from '../components/museum/AcquisitionSalon';
-import { MuseumFooter } from '../components/museum/MuseumFooter';
-import '../styles/museum.css';
+import PortfolioLayout from '../layouts/PortfolioLayout.astro';
+import { PerformativePortfolio } from '../components/performative/PerformativePortfolio';
+import '../styles/globals.css';
 ---
 
-<MuseumLayout 
-  title="Ignacio Breñas Muñoz | Museo de Arte & Ingeniería de Software"
-  description="Colección al óleo y galería curada de desarrollo de software, TypeScript, Node.js y arquitecturas por Ignacio Breñas Muñoz. Barcelona (disponible para Barcelona y alrededores)."
+<PortfolioLayout
+  title="Ignacio Breñas Muñoz — Performative Software Developer"
+  description="Performative Software Developer en Barcelona: arquitecturas de alta concurrencia, backend en TypeScript & Node.js, Model Context Protocol (MCP) y virtualización con Docker."
 >
-  <!-- Curated Navigation Bar -->
-  <MuseumNavbar client:load />
-
-  <main class="flex-1">
-    <!-- Foyer / Hero Section with Central Gilded Oil Masterpiece -->
-    <HeroGallery client:load />
-
-    <!-- Sala I: Monografía y Filosofía del Artesano -->
-    <ArtisanManifesto client:visible />
-
-    <!-- Documento Fundacional: El Manifiesto de las Siete Tesis -->
-    <GrandManifesto client:visible />
-
-    <!-- Sala II: Colección de Obras al Óleo & Software Masterpieces -->
-    <ExhibitionMasterpieces client:visible />
-
-    <!-- Sala III: El Atelier / Vitrinas de Instrumentos y Tecnologías -->
-    <AtelierInstruments client:visible />
-
-    <!-- Sala IV: Anales de Proveniencia & Trayectoria Profesional -->
-    <CuratedProvenance client:visible />
-
-    <!-- Sala V: La Academia STUCOM & Archivo de Trabajos -->
-    <AcademyDiplomas client:visible />
-
-    <!-- Sala VI: Salón de Correspondencia & Adquisición Privada -->
-    <AcquisitionSalon client:visible />
-  </main>
-
-  <!-- Curatorial Museum Footer -->
-  <MuseumFooter client:visible />
-</MuseumLayout>
+  <PerformativePortfolio client:load />
+</PortfolioLayout>

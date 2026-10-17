@@ -51,7 +51,6 @@
     "chapterHand": "mi trayectoria profesional en proyectos y empresas reales",
     "lead": "Mi experiencia en entornos de desarrollo backend en producción, laboratorios de hardware y realización técnica audiovisual.",
     "visitWebsite": "Visitar web oficial →",
-    "nextChapter": "Capítulo 1 de 5 · Siguiente: Proyectos",
     "soterguard": {
       "role": "Software Developer Intern",
       "company": "Soterguard",
@@ -109,7 +108,6 @@
     "chapterHand": "proyectos propios que resuelven problemas reales",
     "lead": "Una selección de proyectos personales y académicos donde diseño software con rigor: arquitectura CRM & ERP modular, detección de fraude en Big Data, herramientas de IA y visión artificial.",
     "viewCode": "Ver código en GitHub →",
-    "nextChapter": "Capítulo 2 de 5 · Siguiente: Stack Tecnológico",
     "projects": {
       "damaCrm": {
         "title": "DAMA-CRM — CRM & ERP Modular de Alto Rendimiento",
@@ -154,7 +152,6 @@
     "chapterTitle": "Stack Tecnológico",
     "chapterHand": "cada herramienta con su icono oficial, color de marca y rol",
     "lead": "Herramientas que domino y utilizo en producción: desde backend transaccional con Node.js y PostgreSQL hasta virtualización en contenedores Linux y servidores MCP de IA.",
-    "nextChapter": "Capítulo 3 de 5 · Siguiente: Certificaciones",
     "categories": {
       "languages": "Lenguajes & Tipado",
       "frontend": "Frontend & Reactivo",
@@ -181,8 +178,7 @@
     "badgeCybersecurity": "Cisco Introduction to Cybersecurity",
     "badgeCybersecurityDesc": "Fundamentos de defensa perimetral, criptografía simétrica/asimétrica y políticas de seguridad.",
     "badgeDataScience": "Cisco Introduction to Data Science",
-    "badgeDataScienceDesc": "Análisis estadístico, minería de datos, pipelines predictivos y modelado exploratorio.",
-    "nextChapter": "Capítulo 4 de 5 · Siguiente: Sobre Mí"
+    "badgeDataScienceDesc": "Análisis estadístico, minería de datos, pipelines predictivos y modelado exploratorio."
   },
   "about": {
     "chapterNum": "05",
@@ -223,8 +219,7 @@
     "service2CTA": "Evaluar viabilidad",
     "service3Title": "Infraestructura Virtualizada (Docker/LXC) & Testing Automatizado",
     "service3Desc": "Aprovisionamiento de entornos aislados y arneses de tests con Vitest y Playwright. Cero sorpresas en producción: cada cambio se verifica contra la verdad empírica antes de fusionarse.",
-    "service3CTA": "Auditoría técnica",
-    "nextChapter": "Capítulo 5 de 5 · Siguiente: Contacto"
+    "service3CTA": "Auditoría técnica"
   },
   "contact": {
     "handGreeting": "conexión directa sin rodeos",

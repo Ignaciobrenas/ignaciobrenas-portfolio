@@ -265,18 +265,6 @@ export const AboutChapter: React.FC = () => {
           </li>
         </ul>
 
-        {/* Progress Footer for chapter */}
-        <p className="mt-10 flex items-center gap-3.5 text-[14px] font-bold text-[#94a3b8]">
-          <span className="flex gap-[5px]" aria-hidden="true">
-            <span className="h-2.5 w-3.5 rounded-full bg-[#10b981]" />
-            <span className="h-2.5 w-3.5 rounded-full bg-[#10b981]" />
-            <span className="h-2.5 w-3.5 rounded-full bg-[#10b981]" />
-            <span className="h-2.5 w-3.5 rounded-full bg-[#10b981]" />
-            <span className="h-2.5 w-[30px] rounded-full bg-[#10b981]" />
-          </span>
-          <span>{t('about.nextChapter')}</span>
-        </p>
-
       </div>
     </section>
   );

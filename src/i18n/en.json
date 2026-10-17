@@ -51,7 +51,6 @@
     "chapterHand": "3 lines, one stop: high performance today",
     "lead": "Three roles with direct impact on production, systems engineering, and technical audiovisual operations, delivering reliable, low-latency execution.",
     "visitWebsite": "Visit official website →",
-    "nextChapter": "Chapter 1 of 5 · next: Work",
     "soterguard": {
       "role": "Software Developer Intern",
       "company": "Soterguard",
@@ -109,7 +108,6 @@
     "chapterHand": "personal deliverables engineered to solve real challenges",
     "lead": "A curated selection of software systems: modular enterprise CRM & ERP architecture, Big Data banking fraud detection, AI agent tooling, and real-time computer vision.",
     "viewCode": "View code on GitHub →",
-    "nextChapter": "Chapter 2 of 5 · next: Tech Stack",
     "projects": {
       "damaCrm": {
         "title": "DAMA-CRM — Modular High-Performance CRM & ERP",
@@ -154,7 +152,6 @@
     "chapterTitle": "Tech Stack",
     "chapterHand": "each tool with authentic color & purpose",
     "lead": "Tools I operate in production: from transactional backend with Node.js & PostgreSQL to container virtualization and custom AI MCP servers.",
-    "nextChapter": "Chapter 3 of 5 · next: Credentials",
     "categories": {
       "languages": "Languages & Typing",
       "frontend": "Frontend & Reactive",
@@ -181,8 +178,7 @@
     "badgeCybersecurity": "Cisco Introduction to Cybersecurity",
     "badgeCybersecurityDesc": "Perimeter defense fundamentals, symmetric/asymmetric cryptography, and security posture policies.",
     "badgeDataScience": "Cisco Introduction to Data Science",
-    "badgeDataScienceDesc": "Statistical exploration, data wrangling pipelines, predictive ML models, and metrics analysis.",
-    "nextChapter": "Chapter 4 of 5 · next: About"
+    "badgeDataScienceDesc": "Statistical exploration, data wrangling pipelines, predictive ML models, and metrics analysis."
   },
   "about": {
     "chapterNum": "05",
@@ -223,8 +219,7 @@
     "service2CTA": "Assess feasibility",
     "service3Title": "Virtualized Infra (Docker/LXC) & Automated Testing",
     "service3Desc": "Isolated environment orchestration (Docker, LXC, WSL) and automated test harnesses (Vitest, Playwright). Zero production surprises: every commit is empirically verified.",
-    "service3CTA": "Technical audit",
-    "nextChapter": "Chapter 5 of 5 · next: Say hi"
+    "service3CTA": "Technical audit"
   },
   "contact": {
     "handGreeting": "direct connection without friction",

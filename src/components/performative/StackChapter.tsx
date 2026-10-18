@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Bot, Code2, Database, Layers, Server, TestTube2, Terminal, Cpu, Zap, Activity, RefreshCw } from 'lucide-react';
+import { Bot, Code2, Database, Layers, Server, TestTube2 } from 'lucide-react';
+import { FaJava } from 'react-icons/fa6';
 import { 
   SiTypescript, 
   SiNodedotjs, 
@@ -12,7 +13,6 @@ import {
   SiDocker, 
   SiPostgresql, 
   SiPrisma, 
-  SiGit, 
   SiGithub, 
   SiAnthropic, 
   SiN8N, 
@@ -33,15 +33,10 @@ import {
   SiGithubactions, 
   SiKubernetes, 
   SiTerraform, 
-  SiJira, 
-  SiVitest, 
-  SiConfluence, 
-  SiCypress,
   SiLinuxcontainers,
   SiUbuntu,
   SiDebian,
-  SiKalilinux,
-  SiLinux
+  SiKalilinux
 } from 'react-icons/si';
 
 interface KeycapItem {
@@ -69,6 +64,7 @@ export const StackChapter: React.FC = () => {
       keys: [
         { name: 'TypeScript', type: 'daily', icon: SiTypescript, color: '#3178C6' },
         { name: 'Node.js', type: 'daily', icon: SiNodedotjs, color: '#5FA04E' },
+        { name: 'Java (OOP & Concurrency)', type: 'daily', icon: FaJava, color: '#EA2D2E' },
         { name: 'Python', type: 'daily', icon: SiPython, color: '#3776AB' },
         { name: 'PHP 8.x', type: 'prod', icon: SiPhp, color: '#777BB4' },
         { name: 'SQL', type: 'daily', icon: Database, color: '#4169E1' },

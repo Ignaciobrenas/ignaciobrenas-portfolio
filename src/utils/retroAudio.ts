@@ -7,6 +7,7 @@ class RetroSoundEngine {
   private ctx: AudioContext | null = null;
   private isMuted: boolean = false;
   private lastBlipTime: number = 0;
+  private hasUserInteracted: boolean = false;
 
   constructor() {
     if (typeof window !== 'undefined') {
@@ -14,11 +15,19 @@ class RetroSoundEngine {
       if (saved !== null) {
         this.isMuted = saved === 'true';
       }
+      const unlock = () => {
+        this.hasUserInteracted = true;
+        if (this.ctx && this.ctx.state === 'suspended') {
+          this.ctx.resume().catch(() => {});
+        }
+      };
+      window.addEventListener('pointerdown', unlock, { once: true, passive: true });
+      window.addEventListener('keydown', unlock, { once: true, passive: true });
     }
   }
 
   private initContext() {
-    if (typeof window === 'undefined') return null;
+    if (typeof window === 'undefined' || !this.hasUserInteracted) return null;
     if (!this.ctx) {
       const AudioCtx = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
       if (AudioCtx) {

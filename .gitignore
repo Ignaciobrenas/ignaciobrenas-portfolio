@@ -16,6 +16,7 @@ dist-ssr
 .env.*
 !.env.example
 temp_screenshots/
+audit-screenshots/
 coverage/
 .agents/
 
@@ -29,3 +30,5 @@ coverage/
 *.njsproj
 *.sln
 *.sw?
+
+.vercel

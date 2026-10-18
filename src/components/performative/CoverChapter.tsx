@@ -1,37 +1,31 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { ArrowDown, FileText, Send, Sparkles, Terminal, MessageSquare } from 'lucide-react';
+import { ArrowDown, FileText, Send, Sparkles, Terminal } from 'lucide-react';
 
-interface CoverChapterProps {
-  onOpenChat?: () => void;
-}
-
-export const CoverChapter: React.FC<CoverChapterProps> = ({ onOpenChat }) => {
+export const CoverChapter: React.FC = () => {
   const { t } = useTranslation();
 
   return (
     <section id="top" data-chapter="cover" className="relative pt-6 lg:pt-14 pb-4">
       <div className="flex flex-col items-start min-w-0 w-full">
         
-        {/* Brand Avatar with Animated Holographic Ring (using logo 1.png) */}
-        <div className="mb-4 flex items-center gap-3">
-          <div className="relative group">
-            <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-white via-[#10b981] to-[#38bdf8] opacity-75 blur-sm group-hover:opacity-100 group-hover:blur transition duration-500 animate-pulse" />
-            <div className="relative size-14 sm:size-16 rounded-xl overflow-hidden border-2 border-white/80 bg-[#0c2316] p-1 shadow-lg">
-              <img 
-                src="/images/1.png" 
-                alt="Ignacio Breñas" 
-                className="size-full object-contain filter drop-shadow group-hover:scale-110 transition-transform duration-300"
-              />
-            </div>
+        {/* Brand Logo floating freely without enclosing box */}
+        <div className="mb-5 flex items-center gap-4 sm:gap-5">
+          <div className="relative group shrink-0">
+            <div className="absolute -inset-4 bg-emerald-500/20 rounded-full blur-2xl opacity-70 group-hover:opacity-100 group-hover:blur-3xl transition duration-500 pointer-events-none" />
+            <img 
+              src="/images/1.png" 
+              alt="Ignacio Breñas" 
+              className="relative size-18 sm:size-22 lg:size-24 object-contain filter drop-shadow-[0_10px_28px_rgba(16,185,129,0.5)] group-hover:scale-105 group-hover:drop-shadow-[0_14px_36px_rgba(16,185,129,0.75)] transition-all duration-300"
+            />
           </div>
 
           <div className="flex flex-col">
-            <span className="inline-flex items-center gap-1.5 font-mono text-[11px] font-bold text-[#10b981]">
-              <span className="size-2 rounded-full bg-[#10b981] animate-ping" />
+            <span className="inline-flex items-center gap-2 text-[12px] font-semibold text-emerald-400">
+              <span className="size-2 rounded-full bg-emerald-400 animate-ping" />
               <span>{t('cover.statusActive')}</span>
             </span>
-            <span className="font-mono text-[11.5px] text-white/90 font-semibold tracking-wide">
+            <span className="text-[13px] sm:text-[14px] text-white/90 font-medium tracking-wide mt-0.5">
               {t('cover.statusSubtitle')}
             </span>
           </div>
@@ -70,17 +64,6 @@ export const CoverChapter: React.FC<CoverChapterProps> = ({ onOpenChat }) => {
 
         {/* Action Buttons */}
         <div className="mt-7 flex flex-wrap items-center gap-3 w-full sm:w-auto">
-          {onOpenChat && (
-            <button
-              type="button"
-              onClick={onOpenChat}
-              className="arcade-btn-32bit min-h-[50px] px-6 text-[14px] w-full sm:w-auto"
-            >
-              <MessageSquare className="size-4" />
-              <span>{t('cover.chatButton', { defaultValue: 'Hablar con Ignacio (32-Bit)' })}</span>
-            </button>
-          )}
-
           <a
             href="#experience"
             className="group inline-flex min-h-[50px] items-center justify-center gap-2.5 rounded-full bg-white px-6 text-[15px] font-extrabold text-[#030805] shadow-[0_4px_20px_rgba(255,255,255,0.3)] hover:bg-[#e2e8f0] active:scale-95 transition-all w-full sm:w-auto"
@@ -98,9 +81,8 @@ export const CoverChapter: React.FC<CoverChapterProps> = ({ onOpenChat }) => {
           </a>
 
           <a
-            href="/cv.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/CV_IgnacioBreñasMuñoz.pdf"
+            download="CV_IgnacioBreñasMuñoz.pdf"
             className="group inline-flex min-h-[50px] items-center justify-center gap-2 rounded-full border border-white/15 bg-[#06110a] px-5 text-[14px] font-mono font-semibold text-[#94a3b8] hover:text-white hover:border-[#38bdf8]/60 transition-all w-full sm:w-auto"
           >
             <FileText className="size-4 text-[#38bdf8] group-hover:scale-110 group-hover:rotate-6 transition-transform" />
@@ -108,33 +90,24 @@ export const CoverChapter: React.FC<CoverChapterProps> = ({ onOpenChat }) => {
           </a>
         </div>
 
-        {/* Quick Identity Badges */}
+        {/* Quick Identity Specification Chips */}
         <ul className="mt-7 flex flex-wrap gap-2.5">
-          <li className="group inline-flex h-9 items-center gap-2 rounded-full border border-[#10b981]/40 bg-[#06180e] px-3.5 text-[13.5px] font-semibold text-white shadow-sm hover:border-[#10b981] transition-colors">
-            <span className="size-2 rounded-full bg-[#10b981] group-hover:scale-125 transition-transform" aria-hidden="true" />
+          <li className="group inline-flex h-8 items-center gap-2 rounded-lg border border-[#10b981]/40 bg-[#020804] px-3 font-mono text-[12px] font-bold text-white shadow-sm hover:border-[#10b981] transition-colors">
+            <span className="size-1.5 rounded-full bg-[#10b981]" aria-hidden="true" />
             <span>{t('cover.badgeSoterguard')}</span>
           </li>
-          <li className="group inline-flex h-9 items-center gap-2 rounded-full border border-white/20 bg-[#0a1a10] px-3.5 text-[13.5px] font-semibold text-white shadow-sm hover:border-white transition-colors">
-            <Terminal className="size-3.5 text-white group-hover:rotate-12 transition-transform" />
+          <li className="group inline-flex h-8 items-center gap-2 rounded-lg border border-white/20 bg-[#020603] px-3 font-mono text-[12px] font-bold text-white shadow-sm hover:border-white transition-colors">
+            <Terminal className="size-3.5 text-white" />
             <span>{t('cover.badgeDaw')}</span>
           </li>
-          <li className="inline-flex h-9 items-center gap-2 rounded-full border border-white/10 bg-[#06110a] px-3.5 text-[13.5px] font-semibold text-[#94a3b8]">
+          <li className="inline-flex h-8 items-center gap-2 rounded-lg border border-white/15 bg-[#020603] px-3 font-mono text-[12px] font-bold text-[#94a3b8]">
             <span>{t('cover.badgeLangs')}</span>
           </li>
-          <li className="group inline-flex h-9 items-center gap-2 rounded-full border border-[#38bdf8]/40 bg-[#061822] px-3.5 text-[13.5px] font-semibold text-[#38bdf8] hover:border-[#38bdf8] transition-colors">
-            <Sparkles className="size-3.5 group-hover:scale-125 transition-transform" />
+          <li className="group inline-flex h-8 items-center gap-2 rounded-lg border border-[#38bdf8]/40 bg-[#01060a] px-3 font-mono text-[12px] font-bold text-[#38bdf8] hover:border-[#38bdf8] transition-colors">
+            <Sparkles className="size-3.5" />
             <span>{t('cover.badgeUnita')}</span>
           </li>
         </ul>
-
-        {/* Scroll Instruction */}
-        <p className="mt-10 hidden items-center gap-3 text-[14px] font-bold text-[#94a3b8] lg:flex">
-          <span className="inline-flex h-9 w-[24px] justify-center rounded-full border-2 border-dashed border-white/30 pt-[6px]">
-            <span className="h-2 w-1 rounded-sm bg-white animate-bounce" />
-          </span>
-          <span>{t('cover.scrollCue')}</span>
-        </p>
-
       </div>
     </section>
   );

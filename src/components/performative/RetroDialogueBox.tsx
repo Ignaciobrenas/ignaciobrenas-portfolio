@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Volume2, VolumeX, RotateCcw, FastForward, X } from 'lucide-react';
 
 export interface RetroDialogueBoxProps {
@@ -36,6 +37,8 @@ export const RetroDialogueBox: React.FC<RetroDialogueBoxProps> = ({
   currentIndex = 1,
   totalLines = 1,
 }) => {
+  const { t } = useTranslation();
+
   // Size-dependent typography and padding
   const sizeClasses = {
     sm: {
@@ -70,7 +73,7 @@ export const RetroDialogueBox: React.FC<RetroDialogueBoxProps> = ({
       <div
         role="button"
         tabIndex={0}
-        aria-label="Diálogo interactivo 32-bit. Pulsa o haz clic para continuar"
+        aria-label={t('dialogueBox.ariaLabel')}
         onClick={handleClick}
         onKeyDown={(e) => {
           if (e.key === 'Enter' || e.key === ' ') {
@@ -111,7 +114,7 @@ export const RetroDialogueBox: React.FC<RetroDialogueBoxProps> = ({
             <button
               type="button"
               onClick={onReplay}
-              title="Reiniciar diálogo"
+              title={t('dialogueBox.replayTitle')}
               className="p-1 rounded text-white/60 hover:text-white hover:bg-white/10 transition-colors focus:outline-none"
             >
               <RotateCcw className="size-3" />
@@ -122,7 +125,7 @@ export const RetroDialogueBox: React.FC<RetroDialogueBoxProps> = ({
               <button
                 type="button"
                 onClick={onFastForward}
-                title="Mostrar texto completo"
+                title={t('dialogueBox.fastForwardTitle')}
                 className="p-1 rounded text-[#38bdf8] hover:text-white hover:bg-white/10 transition-colors focus:outline-none animate-pulse"
               >
                 <FastForward className="size-3" />
@@ -133,7 +136,7 @@ export const RetroDialogueBox: React.FC<RetroDialogueBoxProps> = ({
             <button
               type="button"
               onClick={onToggleMute}
-              title={isMuted ? 'Activar sonido retro' : 'Silenciar sonido retro'}
+              title={isMuted ? t('dialogueBox.unmuteSound') : t('dialogueBox.muteSound')}
               className="p-1 rounded text-white/60 hover:text-[#10b981] hover:bg-white/10 transition-colors focus:outline-none"
             >
               {isMuted ? <VolumeX className="size-3 text-white/40" /> : <Volume2 className="size-3 text-[#10b981]" />}
@@ -144,7 +147,7 @@ export const RetroDialogueBox: React.FC<RetroDialogueBoxProps> = ({
               <button
                 type="button"
                 onClick={onClose}
-                title="Cerrar diálogo"
+                title={t('dialogueBox.closeTitle')}
                 className="p-1 rounded text-white/60 hover:text-red-400 hover:bg-white/10 transition-colors focus:outline-none ml-0.5"
               >
                 <X className="size-3" />
@@ -163,7 +166,7 @@ export const RetroDialogueBox: React.FC<RetroDialogueBoxProps> = ({
           {!isTyping && canAdvance && (
             <span
               className="inline-flex items-center ml-1.5 retro-indicator align-baseline"
-              title="Pulsa para continuar"
+              title={t('dialogueBox.continuePrompt')}
             >
               <svg className="size-2.5 text-[#10b981] fill-current drop-shadow-[0_0_8px_rgba(16,185,129,0.8)]" viewBox="0 0 10 10">
                 <polygon points="0,0 10,0 5,8" />
@@ -179,7 +182,7 @@ export const RetroDialogueBox: React.FC<RetroDialogueBoxProps> = ({
 
         {/* Footer Interaction Micro-Hint */}
         <div className={`flex items-center justify-between pt-2 mt-2.5 border-t border-white/10 font-mono text-white/40 ${sizeClasses.footer}`}>
-          <span>{isTyping ? 'Clic / Espacio para saltar' : 'Clic / Espacio para avanzar'}</span>
+          <span>{isTyping ? t('dialogueBox.hintSkip') : t('dialogueBox.hintAdvance')}</span>
           <span className="hidden sm:inline text-[#10b981]/70 font-bold tracking-wider">RETRO_32BIT</span>
         </div>
       </div>

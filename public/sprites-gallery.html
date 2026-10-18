@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ignacio Sprites Visual Audit</title>
+  <style>
+    body {
+      background: #030805;
+      color: #e2e8f0;
+      font-family: system-ui, -apple-system, sans-serif;
+      margin: 0;
+      padding: 30px;
+    }
+    h1 {
+      color: #10b981;
+      font-family: monospace;
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+    p {
+      color: #94a3b8;
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: rgba(10, 31, 18, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: all 0.2s;
+    }
+    .card:hover {
+      border-color: #10b981;
+      transform: translateY(-2px);
+    }
+    .sprite-box {
+      width: 140px;
+      height: 160px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, transparent 70%);
+      margin-bottom: 12px;
+      border-bottom: 1px dashed rgba(255,255,255,0.08);
+      padding-bottom: 4px;
+    }
+    .sprite-box img {
+      max-width: 130px;
+      max-height: 150px;
+      object-fit: contain;
+      image-rendering: pixelated;
+    }
+    .title {
+      font-family: monospace;
+      font-size: 11px;
+      color: #38bdf8;
+      text-align: center;
+      word-break: break-all;
+      margin-bottom: 4px;
+    }
+    .badge {
+      font-size: 9px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: rgba(16, 185, 129, 0.15);
+      color: #10b981;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+    .badge-soterguard {
+      background: rgba(56, 189, 248, 0.15);
+      color: #38bdf8;
+      border-color: rgba(56, 189, 248, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <h1>IGNACIO BREÑAS — 32-BIT SPRITE MATRIX AUDIT</h1>
+  <p>Reviewing all 38 native SVG vector sprites for visual hierarchy, facial proportions, posture, and badge alignment.</p>
+  <div class="grid">
+    
+      <div class="card">
+        <div class="sprite-box">
+          <img src="/images/sprites/ignacio_ai_holo.svg" alt="ignacio_ai_holo.svg" />
+        </div>
+        <div class="title">ai_holo</div>
+        <span class="badge ">CORE</span>
+      </div>
+      
+
+      <div class="card">
+        <div class="sprite-box">
+          <img src="/images/sprites/ignacio_books.svg" alt="ignacio_books.svg" />
+        </div>
+        <div class="title">books</div>
+        <span class="badge ">CORE</span>
+      </div>
+      
+
+      <div class="card">
+        <div class="sprite-box">
+          <img src="/images/sprites/ignacio_call.svg" alt="ignacio_call.svg" />
+        </div>
+        <div class="title">call</div>
+        <span class="badge ">CORE</span>
+      </div>
+      
+
+      <div class="card">
+        <div class="sprite-box">
+          <img src="/images/sprites/ignacio_camera.svg" alt="ignacio_camera.svg" />
+        </div>
+        <div class="title">camera</div>
+        <span class="badge ">CORE</span>
+      </div>
+      
+
+      <div class="card">
+        <div class="sprite-box">
+          <img src="/images/sprites/ignacio_coding.svg" alt="ignacio_coding.svg" />
+        </div>
+        <div class="title">coding</div>
+        <span class="badge ">CORE</span>
+      </div>
+      
+
+      <div class="card">
+        <div class="sprite-box">
+          <img src="/images/sprites/ignacio_coffee.svg" alt="ignacio_coffee.svg" />
+        </div>
+        <div class="title">coffee</div>
+        <span class="badge ">CORE</span>
+      </div>
+      
+
+      <div class="card">
+        <div class="sprite-box">
+          <img src="/images/sprites/ignacio_confident.svg" alt="ignacio_confident.svg" />
+        </div>
+        <div class="title">confident</div>
+        <span class="badge ">CORE</span>
+      </div>
+      
+
+      <div class="card">
+        <div class="sprite-box">
+          <img src="/images/sprites/ignacio_credly.svg" alt="ignacio_credly.svg" />
+        </div>
+        <div class="title">credly</div>
+        <span class="badge ">PLATFORM</span>
+      </div>
+      
+
+      <div class="card">
+        <div class="sprite-box">
+          <img src="/images/sprites/ignacio_github.svg" alt="ignacio_github.svg" />
+        </div>
+        <div class="title">github</div>
+        <span class="badge ">PLATFORM</span>
+      </div>
+      
+
+      <div class="card">
+        <div class="sprite-box">
+          <img src="/images/sprites/ignacio_grateful.svg" alt="ignacio_grateful.svg" />
+        </div>
+        <div class="title">grateful</div>
+        <span class="badge ">CORE</span>
+      </div>
+      
+
+      <div class="card">
+        <div class="sprite-box">
+          <img src="/images/sprites/ignacio_hardware.svg" alt="ignacio_hardware.svg" />
+        </div>
+        <div class="title">hardware</div>
+        <span class="badge ">CORE</span>
+      </div>
+      
+
+      <div class="card">
+        <div class="sprite-box">
+          <img src="/images/sprites/ignacio_idea.svg" alt="ignacio_idea.svg" />
+        </div>
+        <div class="title">idea</div>
+        <span class="badge ">CORE</span>
+      </div>
+      
+
+      <div class="card">
+        <div class="sprite-box">
+          <img src="/images/sprites/ignacio_idle.svg" alt="ignacio_idle.svg" />
+        </div>
+        <div class="title">idle</div>
+        <span class="badge ">CORE</span>
+      </div>
+      
+
+      <div class="card">
+        <div class="sprite-box">
+          <img src="/images/sprites/ignacio_laugh.svg" alt="ignacio_laugh.svg" />
+        </div>
+        <div class="title">laugh</div>
+        <span class="badge ">CORE</span>
+      </div>
+      
+
+      <div class="card">
+        <div class="sprite-box">
+          <img src="/images/sprites/ignacio_linkedin.svg" alt="ignacio_linkedin.svg" />
+        </div>
+        <div class="title">linkedin</div>
+        <span class="badge ">PLATFORM</span>
+      </div>
+      
+
+      <div class="card">
+        <div class="sprite-box">
+          <img src="/images/sprites/ignacio_mail.svg" alt="ignacio_mail.svg" />
+        </div>
+        <div class="title">mail</div>
+        <span class="badge ">CORE</span>
+      </div>
+      
+
+      <div class="card">
+        <div class="sprite-box">
+          <img src="/images/sprites/ignacio_mic.svg" alt="ignacio_mic.svg" />
+        </div>
+        <div class="title">mic</div>
+        <span class="badge ">CORE</span>
+      </div>
+      
+
+      <div class="card">
+        <div class="sprite-box">
+          <img src="/images/sprites/ignacio_point_down.svg" alt="ignacio_point_down.svg" />
+        </div>
+        <div class="title">point_down</div>
+        <span class="badge ">CORE</span>
+      </div>
+      
+
+      <div class="card">
+        <div class="sprite-box">
+          <img src="/images/sprites/ignacio_point_right.svg" alt="ignacio_point_right.svg" />
+        </div>
+        <div class="title">point_right</div>
+        <span class="badge ">CORE</span>
+      </div>
+      
+
+      <div class="card">
+        <div class="sprite-box">
+          <img src="/images/sprites/ignacio_read_specs.svg" alt="ignacio_read_specs.svg" />
+        </div>
+        <div class="title">read_specs</div>
+        <span class="badge ">CORE</span>
+      </div>
+      
+
+      <div class="card">
+        <div class="sprite-box">
+          <img src="/images/sprites/ignacio_soterguard_coding.svg" alt="ignacio_soterguard_coding.svg" />
+        </div>
+        <div class="title">soterguard_coding</div>
+        <span class="badge badge-soterguard">SOTERGUARD</span>
+      </div>
+      
+
+      <div class="card">
+        <div class="sprite-box">
+          <img src="/images/sprites/ignacio_soterguard_confident.svg" alt="ignacio_soterguard_confident.svg" />
+        </div>
+        <div class="title">soterguard_confident</div>
+        <span class="badge badge-soterguard">SOTERGUARD</span>
+      </div>
+      
+
+      <div class="card">
+        <div class="sprite-box">
+          <img src="/images/sprites/ignacio_soterguard_hardware.svg" alt="ignacio_soterguard_hardware.svg" />
+        </div>
+        <div class="title">soterguard_hardware</div>
+        <span class="badge badge-soterguard">SOTERGUARD</span>
+      </div>
+      
+
+      <div class="card">
+        <div class="sprite-box">
+          <img src="/images/sprites/ignacio_soterguard_talk_gesture.svg" alt="ignacio_soterguard_talk_gesture.svg" />
+        </div>
+        <div class="title">soterguard_talk_gesture</div>
+        <span class="badge badge-soterguard">SOTERGUARD</span>
+      </div>
+      
+
+      <div class="card">
+        <div class="sprite-box">
+          <img src="/images/sprites/ignacio_soterguard_talk_mid.svg" alt="ignacio_soterguard_talk_mid.svg" />
+        </div>
+        <div class="title">soterguard_talk_mid</div>
+        <span class="badge badge-soterguard">SOTERGUARD</span>
+      </div>
+      
+
+      <div class="card">
+        <div class="sprite-box">
+          <img src="/images/sprites/ignacio_soterguard_talk_open.svg" alt="ignacio_soterguard_talk_open.svg" />
+        </div>
+        <div class="title">soterguard_talk_open</div>
+        <span class="badge badge-soterguard">SOTERGUARD</span>
+      </div>
+      
+
+      <div class="card">
+        <div class="sprite-box">
+          <img src="/images/sprites/ignacio_soterguard_wave.svg" alt="ignacio_soterguard_wave.svg" />
+        </div>
+        <div class="title">soterguard_wave</div>
+        <span class="badge badge-soterguard">SOTERGUARD</span>
+      </div>
+      
+
+      <div class="card">
+        <div class="sprite-box">
+          <img src="/images/sprites/ignacio_surprised.svg" alt="ignacio_surprised.svg" />
+        </div>
+        <div class="title">surprised</div>
+        <span class="badge ">CORE</span>
+      </div>
+      
+
+      <div class="card">
+        <div class="sprite-box">
+          <img src="/images/sprites/ignacio_tablet.svg" alt="ignacio_tablet.svg" />
+        </div>
+        <div class="title">tablet</div>
+        <span class="badge ">CORE</span>
+      </div>
+      
+
+      <div class="card">
+        <div class="sprite-box">
+          <img src="/images/sprites/ignacio_talk_expressive.svg" alt="ignacio_talk_expressive.svg" />
+        </div>
+        <div class="title">talk_expressive</div>
+        <span class="badge ">CORE</span>
+      </div>
+      
+
+      <div class="card">
+        <div class="sprite-box">
+          <img src="/images/sprites/ignacio_talk_gesture.svg" alt="ignacio_talk_gesture.svg" />
+        </div>
+        <div class="title">talk_gesture</div>
+        <span class="badge ">CORE</span>
+      </div>
+      
+
+      <div class="card">
+        <div class="sprite-box">
+          <img src="/images/sprites/ignacio_talk_mid.svg" alt="ignacio_talk_mid.svg" />
+        </div>
+        <div class="title">talk_mid</div>
+        <span class="badge ">CORE</span>
+      </div>
+      
+
+      <div class="card">
+        <div class="sprite-box">
+          <img src="/images/sprites/ignacio_talk_open.svg" alt="ignacio_talk_open.svg" />
+        </div>
+        <div class="title">talk_open</div>
+        <span class="badge ">CORE</span>
+      </div>
+      
+
+      <div class="card">
+        <div class="sprite-box">
+          <img src="/images/sprites/ignacio_think.svg" alt="ignacio_think.svg" />
+        </div>
+        <div class="title">think</div>
+        <span class="badge ">CORE</span>
+      </div>
+      
+
+      <div class="card">
+        <div class="sprite-box">
+          <img src="/images/sprites/ignacio_thumbs_up.svg" alt="ignacio_thumbs_up.svg" />
+        </div>
+        <div class="title">thumbs_up</div>
+        <span class="badge ">CORE</span>
+      </div>
+      
+
+      <div class="card">
+        <div class="sprite-box">
+          <img src="/images/sprites/ignacio_wave.svg" alt="ignacio_wave.svg" />
+        </div>
+        <div class="title">wave</div>
+        <span class="badge ">CORE</span>
+      </div>
+      
+
+      <div class="card">
+        <div class="sprite-box">
+          <img src="/images/sprites/ignacio_wave_both.svg" alt="ignacio_wave_both.svg" />
+        </div>
+        <div class="title">wave_both</div>
+        <span class="badge ">CORE</span>
+      </div>
+      
+
+      <div class="card">
+        <div class="sprite-box">
+          <img src="/images/sprites/ignacio_wink.svg" alt="ignacio_wink.svg" />
+        </div>
+        <div class="title">wink</div>
+        <span class="badge ">CORE</span>
+      </div>
+      
+  </div>
+</body>
+</html>

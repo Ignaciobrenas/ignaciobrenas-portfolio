@@ -36,6 +36,7 @@ export const PerformativePortfolio: React.FC = () => {
   useEffect(() => {
     const SCROLL_TARGETS: { id: string; target: string; chapter: string }[] = [
       { id: 'top', target: 'cover', chapter: 'cover' },
+      { id: 'spotlight', target: 'github', chapter: 'cover' },
       { id: 'experience', target: 'experience', chapter: 'experience' },
       { id: 'soteguard', target: 'soteguard', chapter: 'experience' },
       { id: 'vimtech', target: 'vimtech', chapter: 'experience' },
@@ -93,7 +94,6 @@ export const PerformativePortfolio: React.FC = () => {
         activeChapter={activeChapter} 
         lang={lang} 
         onToggleLang={handleToggleLang} 
-        onOpenChat={() => setIsChatOpen(true)}
       />
 
       {/* Main Chapter Stage Layout */}
@@ -103,7 +103,7 @@ export const PerformativePortfolio: React.FC = () => {
             
             {/* Left Content Column (Chapters 00 through 07) */}
             <div className="min-w-0 flex flex-col divide-y divide-white/10 pb-36 lg:pb-12">
-              <CoverChapter onOpenChat={() => setIsChatOpen(true)} />
+              <CoverChapter />
 
               {/* Prominent Spotlight for GitHub, LinkedIn & Credly */}
               <EngineeringSpotlight />

@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Mail, Check, Copy, ExternalLink, Send, FileText, ArrowUpRight, ShieldCheck, PhoneCall, Sparkles } from 'lucide-react';
+import { Mail, Check, Copy, ExternalLink, FileText, ArrowUpRight, ShieldCheck, PhoneCall, Sparkles, Eye, Download } from 'lucide-react';
 import { SiGithub } from 'react-icons/si';
 import { FaLinkedin } from 'react-icons/fa';
+import { CvPreviewModal } from './CvPreviewModal';
 
 export const ContactChapter: React.FC = () => {
   const { t, i18n } = useTranslation();
   const [copied, setCopied] = useState<boolean>(false);
   const [isCallingHover, setIsCallingHover] = useState<boolean>(false);
+  const [isCvPreviewOpen, setIsCvPreviewOpen] = useState<boolean>(false);
 
   const email = 'ignaciobrenas@gmail.com';
   const defaultSubject = encodeURIComponent(
@@ -49,41 +51,46 @@ export const ContactChapter: React.FC = () => {
         </p>
 
         {/* Fast Reply Status */}
-        <p className="mt-4 inline-flex items-center gap-2 text-[14px] font-bold text-[#10b981]">
-          <span className="size-2 rounded-full bg-[#10b981] animate-ping" aria-hidden="true" />
+        <p className="mt-4 inline-flex items-center gap-2 text-[14px] font-medium text-emerald-400">
+          <span className="size-2 rounded-full bg-emerald-400 animate-ping" aria-hidden="true" />
           <span>{t('contact.fastReply')}</span>
         </p>
 
         {/* ======================================================== */}
-        {/* INTERACTIVE SPRITE HERO CARD: "HABLEMOS / LLÁMAME" */}
+        {/* INTERACTIVE SPRITE HERO CONSOLE: DIRECT CONTACT & INTERCOM */}
         {/* ======================================================== */}
         <div 
           onMouseEnter={() => setIsCallingHover(true)}
           onMouseLeave={() => setIsCallingHover(false)}
-          className="mt-8 w-full rounded-[28px] border-2 border-[#10b981]/50 bg-gradient-to-br from-[#061c10]/95 via-[#030d07]/95 to-[#010502]/98 p-6 sm:p-7 shadow-[0_20px_50px_rgba(0,0,0,0.8)] backdrop-blur-xl hover:border-[#10b981] hover:shadow-[0_25px_60px_rgba(16,185,129,0.25)] transition-all duration-300 relative overflow-hidden"
+          className="mt-8 w-full rounded-2xl p-6 sm:p-8 bg-[#07170e]/60 backdrop-blur-xl border border-emerald-500/25 hover:border-emerald-500/50 shadow-[0_12px_40px_rgba(0,0,0,0.5)] transition-all duration-300 relative overflow-hidden"
         >
-          {/* Ambient light glow */}
-          <div className="absolute top-0 right-0 w-72 h-72 bg-[#10b981]/15 rounded-full blur-3xl pointer-events-none" />
-
           <div className="relative z-10 flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
             
-            {/* Left Column: Speech Bubble & Action CTAs */}
+            {/* Left Column: Comms Header, Speech Monitor & Action CTAs */}
             <div className="flex-1 min-w-0 flex flex-col items-start">
-              <div className="inline-flex items-center gap-2 font-mono text-[11px] font-bold text-[#10b981] bg-[#10b981]/15 px-3 py-1 rounded-full border border-[#10b981]/30 mb-3">
-                <Sparkles className="size-3" />
-                <span>DIRECT_CONTACT // 32-BIT</span>
+              <div className="flex items-center gap-3 mb-3">
+                <span className="font-mono text-[11px] font-bold text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20 flex items-center gap-1.5">
+                  <Sparkles className="size-3 text-emerald-400" />
+                  <span>{t('contact.directContactBadge')}</span>
+                </span>
+                <span className="text-[12px] text-slate-400 flex items-center gap-1.5">
+                  <span className="size-1.5 rounded-full bg-emerald-400" />
+                  <span>{t('contact.availableForRoles')}</span>
+                </span>
               </div>
 
               <h3 className="font-display text-[22px] sm:text-[26px] font-extrabold text-white leading-tight">
-                {i18n.language === 'es' ? '¿Tienes un proyecto o una vacante en tu equipo?' : 'Have an exciting project or opening on your team?'}
+                {t('contact.directContactTitle')}
               </h3>
 
-              {/* Speech bubble from sprite */}
-              <div className="mt-3.5 p-4 rounded-2xl bg-[#030905] border border-white/15 text-[14.5px] sm:text-[15.5px] leading-relaxed text-white/90 relative">
-                <p className="m-0 font-retro">
-                  {isCallingHover
-                    ? (i18n.language === 'es' ? '¡Hablemos! Puedes escribirme por correo directo, mandarme un mensaje o conectar en LinkedIn.' : "Let's talk! Drop me an email, send a message, or connect on LinkedIn.")
-                    : (i18n.language === 'es' ? 'Pasa el cursor o pulsa para iniciar la llamada o enviarme un mensaje directo.' : "Hover or tap to start a call or send a direct message.")}
+              {/* Speech monitor from sprite */}
+              <div className="mt-4 p-4 rounded-xl bg-black/40 backdrop-blur-md border border-white/10 text-[14.5px] sm:text-[15.5px] leading-relaxed text-slate-200 relative w-full shadow-inner">
+                <div className="text-[11px] font-mono text-emerald-400 font-semibold mb-1 flex items-center gap-1.5">
+                  <span className="size-1.5 rounded-full bg-emerald-400" />
+                  <span>Ignacio Breñas:</span>
+                </div>
+                <p className="m-0 font-sans text-slate-300">
+                  {isCallingHover ? t('contact.speechBubbleCalling') : t('contact.speechBubbleDefault')}
                 </p>
               </div>
 
@@ -93,156 +100,178 @@ export const ContactChapter: React.FC = () => {
                   href={gmailUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#10b981] hover:bg-[#34d399] text-[#030805] font-mono text-[13px] font-bold shadow-md active:scale-95 transition-all"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-sans text-[13px] font-bold shadow-lg shadow-emerald-500/20 active:scale-95 transition-all"
                 >
-                  <Mail className="size-4 text-[#030805]" />
-                  <span>{i18n.language === 'es' ? 'Enviar Correo Ahora' : 'Send Email Now'}</span>
+                  <Mail className="size-4 text-slate-950" />
+                  <span>{t('contact.sendEmailNow')}</span>
                 </a>
 
                 <a
-                  href="https://www.linkedin.com/in/ignacio-brenas-mu%C3%B1oz-65a88a297/"
+                  href="https://www.linkedin.com/in/ignacio-bre%C3%B1as-mu%C3%B1oz-02a90b218/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-mono text-[13px] font-bold active:scale-95 transition-all"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/[0.06] hover:bg-white/[0.12] border border-white/15 text-white font-sans text-[13px] font-medium active:scale-95 transition-all"
                 >
-                  <FaLinkedin className="size-4 text-[#0077b5]" />
+                  <FaLinkedin className="size-4 text-[#38bdf8]" />
                   <span>LinkedIn</span>
                   <ExternalLink className="size-3 text-white/60" />
                 </a>
               </div>
             </div>
 
-            {/* Right Column: Animated Sprite Mount */}
+            {/* Right Column: Visual Frame for Interactive Sprite */}
             <div 
               onClick={() => setIsCallingHover(!isCallingHover)}
               className="relative shrink-0 flex flex-col items-center cursor-pointer group/sprite"
-              title={i18n.language === 'es' ? 'Toca para animar a Ignacio' : 'Tap to animate Ignacio'}
+              title={t('contact.tapToAnimate')}
             >
-              <div className="relative size-36 sm:size-44 rounded-2xl bg-[#020704] border-2 border-white/20 p-2 flex items-center justify-center overflow-hidden shadow-inner group-hover/sprite:border-[#10b981] transition-colors">
+              <div className="relative size-36 sm:size-44 rounded-2xl bg-black/40 backdrop-blur-md border border-white/15 p-2 flex items-center justify-center overflow-hidden shadow-[inset_0_0_20px_rgba(0,0,0,0.8)] group-hover/sprite:border-emerald-400/50 transition-colors">
                 <img
-                  src={isCallingHover ? '/images/sprites/ignacio_call.png' : '/images/sprites/ignacio_mail.png'}
+                  src={isCallingHover ? '/images/sprites/ignacio_call.svg' : '/images/sprites/ignacio_mail.svg'}
                   alt="Ignacio Breñas — Sprite Llamada y Correo"
                   className="w-full h-full object-contain pixelated sprite-breathe drop-shadow-md transition-all duration-200"
                 />
               </div>
 
-              <span className="mt-2 font-mono text-[11px] font-bold text-[#10b981] flex items-center gap-1.5 bg-[#030805] px-3 py-0.5 rounded-full border border-[#10b981]/40">
-                <PhoneCall className="size-3 text-[#10b981]" />
-                <span>{isCallingHover ? (i18n.language === 'es' ? 'LLAMANDO...' : 'CALLING...') : (i18n.language === 'es' ? 'DISPONIBLE' : 'AVAILABLE')}</span>
+              <span className="mt-2.5 font-mono text-[11px] font-semibold text-emerald-400 flex items-center gap-1.5 bg-black/50 backdrop-blur-md px-3 py-1 rounded-full border border-emerald-500/30">
+                <PhoneCall className="size-3 text-emerald-400" />
+                <span>{isCallingHover ? t('contact.callingStatus') : t('contact.availableStatus')}</span>
               </span>
             </div>
 
           </div>
         </div>
 
-        {/* Direct One-Click Email Launchers Grid */}
-        <div className="mt-8 grid grid-cols-1 gap-4 w-full sm:grid-cols-2 items-stretch">
+        {/* Transmission Channels Hub (Gmail, Outlook, Client, Clipboard) */}
+        <div className="mt-6 grid grid-cols-1 gap-4 w-full sm:grid-cols-2 items-stretch">
           
-          {/* Gmail Launcher */}
+          {/* Channel 1: Real Official Google Gmail Logo */}
           <a
             href={gmailUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative rounded-[24px] border border-[#ea4335]/40 bg-gradient-to-br from-[#230d0a]/90 via-[#120605] to-[#050202] p-5 sm:p-6 shadow-[0_10px_30px_rgba(0,0,0,0.7)] hover:border-[#ea4335] hover:shadow-[0_15px_40px_rgba(234,67,53,0.25)] transition-all duration-300 flex items-center justify-between gap-3.5"
+            className="group relative rounded-2xl p-5 bg-[#140807]/50 hover:bg-[#1c0b0a]/70 backdrop-blur-xl border border-red-500/20 hover:border-red-500/50 transition-all duration-300 flex items-center justify-between gap-3.5 shadow-lg"
           >
             <div className="flex items-center gap-3.5 min-w-0 flex-1">
-              <div className="size-12 shrink-0 rounded-xl bg-[#ea4335]/20 border border-[#ea4335]/50 flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-transform shadow-inner">
-                <svg className="size-6 text-[#ea4335] fill-current" viewBox="0 0 24 24">
-                  <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/>
+              <div className="size-12 shrink-0 rounded-xl bg-white/[0.08] border border-white/10 flex items-center justify-center group-hover:scale-105 transition-transform shadow-inner">
+                {/* Official Multi-Color Google Gmail SVG */}
+                <svg className="size-6 shrink-0" viewBox="0 49.4 512 399.42" xmlns="http://www.w3.org/2000/svg">
+                  <g fill="none" fillRule="evenodd">
+                    <g fillRule="nonzero">
+                      <path fill="#4285F4" d="M34.91 448.818h81.454V251L0 163.727V413.91c0 19.287 15.622 34.91 34.91 34.91z"/>
+                      <path fill="#34A853" d="M395.636 448.818h81.455c19.287 0 34.909-15.622 34.909-34.909V163.727L395.636 251z"/>
+                      <path fill="#FBBC04" d="M395.636 99.727V251L512 163.727v-46.545c0-43.142-49.25-67.782-83.782-41.891z"/>
+                    </g>
+                    <path fill="#EA4335" d="M116.364 251V99.727L256 204.455 395.636 99.727V251L256 355.727z"/>
+                    <path fill="#C5221F" fillRule="nonzero" d="M0 117.182v46.545L116.364 251V99.727L83.782 75.291C49.25 49.4 0 74.04 0 117.18z"/>
+                  </g>
                 </svg>
               </div>
               <div className="min-w-0 flex-1">
-                <span className="font-display text-[17px] sm:text-[19px] font-extrabold text-white group-hover:text-[#ea4335] transition-colors flex items-center gap-1.5 truncate">
-                  <span className="truncate">{t('contact.gmailTitle')}</span>
-                  <ArrowUpRight className="size-4 shrink-0 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                <span className="font-mono text-[10px] text-red-400 font-bold block uppercase tracking-wider">
+                  Google Workspace
                 </span>
-                <span className="text-[12.5px] font-mono text-[#94a3b8] block truncate mt-0.5">
+                <span className="font-display text-[16px] sm:text-[18px] font-extrabold text-white group-hover:text-red-400 transition-colors flex items-center gap-1.5 truncate">
+                  <span className="truncate">{t('contact.gmailTitle')}</span>
+                  <ArrowUpRight className="size-3.5 shrink-0 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </span>
+                <span className="text-[12px] text-slate-400 block truncate">
                   {t('contact.gmailSub')}
                 </span>
               </div>
             </div>
-            <span className="shrink-0 font-mono text-[11px] font-extrabold text-[#ea4335] bg-[#ea4335]/15 px-2.5 py-1 rounded-md border border-[#ea4335]/30 hidden sm:inline-block">
+            <span className="shrink-0 font-mono text-[10px] font-bold text-red-400 bg-red-500/10 px-2.5 py-1 rounded-full border border-red-500/30 hidden sm:inline-block">
               {t('contact.gmailBadge')}
             </span>
           </a>
 
-          {/* Outlook Launcher */}
+          {/* Channel 2: Real Official Microsoft Outlook Logo */}
           <a
             href={outlookUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative rounded-[24px] border border-[#0078d4]/40 bg-gradient-to-br from-[#071929]/90 via-[#030d17] to-[#010408] p-5 sm:p-6 shadow-[0_10px_30px_rgba(0,0,0,0.7)] hover:border-[#0078d4] hover:shadow-[0_15px_40px_rgba(0,120,212,0.25)] transition-all duration-300 flex items-center justify-between gap-3.5"
+            className="group relative rounded-2xl p-5 bg-[#05111d]/50 hover:bg-[#071829]/70 backdrop-blur-xl border border-sky-500/20 hover:border-sky-500/50 transition-all duration-300 flex items-center justify-between gap-3.5 shadow-lg"
           >
             <div className="flex items-center gap-3.5 min-w-0 flex-1">
-              <div className="size-12 shrink-0 rounded-xl bg-[#0078d4]/20 border border-[#0078d4]/50 flex items-center justify-center group-hover:scale-110 group-hover:-rotate-6 transition-transform shadow-inner">
-                <svg className="size-6 text-[#0078d4] fill-current" viewBox="0 0 24 24">
-                  <path d="M7.88 12.04c0 .45-.11.87-.33 1.25s-.54.68-.94.9-.88.33-1.43.33c-.57 0-1.06-.12-1.48-.35s-.74-.56-.96-.98-.33-.94-.33-1.55c0-.62.11-1.15.34-1.58s.55-.77.97-.99 1-.34 1.73-.34c.73 0 1.31.11 1.73.34s.73.56.93.99.3 1 .3 1.97zm14.12 7.02V4.94c0-.52-.18-.96-.55-1.33s-.81-.55-1.33-.55H8.79l-8.79 3.8v10.28l8.79 3.8h11.33c.52 0 .96-.18 1.33-.55s.55-.81.55-1.33zM7.34 10.3c-.22-.38-.56-.57-1.01-.57-.45 0-.79.19-1.01.57s-.34.92-.34 1.63c0 .72.11 1.26.34 1.64s.56.57 1.01.57c.45 0 .79-.19 1.01-.57s.33-.92.33-1.64c0-.71-.11-1.25-.33-1.63z"/>
-                </svg>
+              <div className="size-12 shrink-0 rounded-xl bg-white/[0.08] border border-white/10 flex items-center justify-center group-hover:scale-105 transition-transform shadow-inner">
+                {/* Official Microsoft Outlook Brand Logo */}
+                <img
+                  src="/images/assets/outlook_official.svg"
+                  alt="Microsoft Outlook"
+                  className="size-7 shrink-0 object-contain drop-shadow-sm"
+                />
               </div>
               <div className="min-w-0 flex-1">
-                <span className="font-display text-[17px] sm:text-[19px] font-extrabold text-white group-hover:text-[#0078d4] transition-colors flex items-center gap-1.5 truncate">
-                  <span className="truncate">{t('contact.outlookTitle')}</span>
-                  <ArrowUpRight className="size-4 shrink-0 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                <span className="font-mono text-[10px] text-sky-400 font-bold block uppercase tracking-wider">
+                  Microsoft 365
                 </span>
-                <span className="text-[12.5px] font-mono text-[#94a3b8] block truncate mt-0.5">
+                <span className="font-display text-[16px] sm:text-[18px] font-extrabold text-white group-hover:text-sky-400 transition-colors flex items-center gap-1.5 truncate">
+                  <span className="truncate">{t('contact.outlookTitle')}</span>
+                  <ArrowUpRight className="size-3.5 shrink-0 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </span>
+                <span className="text-[12px] text-slate-400 block truncate">
                   {t('contact.outlookSub')}
                 </span>
               </div>
             </div>
-            <span className="shrink-0 font-mono text-[11px] font-extrabold text-[#0078d4] bg-[#0078d4]/15 px-2.5 py-1 rounded-md border border-[#0078d4]/30 hidden sm:inline-block">
+            <span className="shrink-0 font-mono text-[10px] font-bold text-sky-400 bg-sky-500/10 px-2.5 py-1 rounded-full border border-sky-500/30 hidden sm:inline-block">
               {t('contact.outlookBadge')}
             </span>
           </a>
 
-        </div>
-
-        {/* Secondary Direct Methods: Native Mailto & Copy Address */}
-        <div className="mt-4 grid grid-cols-1 gap-4 w-full sm:grid-cols-2 items-stretch">
-          
-          {/* Default Client (Mailto) */}
+          {/* Channel 3: Native Mailto */}
           <a
             href={mailtoUrl}
-            className="group rounded-[20px] border border-white/15 bg-[#0c2316]/90 p-5 flex items-center justify-between gap-3 hover:border-white hover:bg-[#163a25] transition-all"
+            className="group rounded-2xl p-5 bg-white/[0.03] hover:bg-white/[0.06] backdrop-blur-xl border border-white/10 hover:border-white/30 transition-all flex items-center justify-between gap-3 shadow-lg"
           >
             <div className="flex items-center gap-3.5 min-w-0 flex-1">
-              <Mail className="size-5 shrink-0 text-white group-hover:scale-110 transition-transform" />
+              <div className="size-12 shrink-0 rounded-xl bg-white/[0.05] border border-white/10 flex items-center justify-center group-hover:scale-105 transition-transform shadow-inner">
+                <Mail className="size-5 text-emerald-400 group-hover:scale-105 transition-transform" />
+              </div>
               <div className="min-w-0 flex-1">
-                <span className="font-bold text-[14.5px] text-white block truncate">
+                <span className="font-mono text-[10px] text-slate-400 font-bold block uppercase tracking-wider">
+                  {t('contact.mailAppBadge')}
+                </span>
+                <span className="font-bold text-[15px] text-white block truncate group-hover:text-emerald-400 transition-colors">
                   {t('contact.mailtoTitle')}
                 </span>
-                <span className="text-[12px] font-mono text-[#94a3b8] block truncate mt-0.5">
+                <span className="text-[12px] text-slate-400 block truncate">
                   {t('contact.mailtoSub')}
                 </span>
               </div>
             </div>
-            <ArrowUpRight className="size-4 shrink-0 text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            <ArrowUpRight className="size-4 shrink-0 text-slate-400 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
           </a>
 
-          {/* Copy Email Button */}
+          {/* Channel 4: Copy Email to Clipboard Buffer */}
           <button
             onClick={handleCopyEmail}
-            className="group rounded-[20px] border border-white/15 bg-[#06110a] p-5 flex items-center justify-between gap-3 hover:border-white hover:bg-[#0c1a10] transition-all active:scale-98 text-left"
+            className="group rounded-2xl p-5 bg-white/[0.03] hover:bg-emerald-500/10 backdrop-blur-xl border border-white/10 hover:border-emerald-500/40 transition-all active:scale-98 text-left flex items-center justify-between gap-3 shadow-lg"
           >
             <div className="flex items-center gap-3.5 min-w-0 flex-1">
-              {copied ? (
-                <Check className="size-5 shrink-0 text-[#10b981]" />
-              ) : (
-                <Copy className="size-5 shrink-0 text-white group-hover:scale-110 transition-transform" />
-              )}
+              <div className="size-12 shrink-0 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center group-hover:scale-105 transition-transform shadow-inner">
+                {copied ? (
+                  <Check className="size-5 text-emerald-400" />
+                ) : (
+                  <Copy className="size-5 text-emerald-400" />
+                )}
+              </div>
               <div className="min-w-0 flex-1">
-                <span className="font-mono text-[14px] font-bold text-white block truncate">
-                  {email}
+                <span className="font-mono text-[10px] text-emerald-400 font-bold block uppercase tracking-wider">
+                  {t('contact.copyAddressBadge')}
                 </span>
-                <span className="text-[12px] text-[#94a3b8] block truncate mt-0.5">
+                <span className="font-bold text-[15px] text-white block truncate group-hover:text-emerald-400 transition-colors font-mono">
+                  ignaciobrenas@gmail.com
+                </span>
+                <span className="text-[12px] text-slate-400 block truncate">
                   {copied ? t('contact.copiedEmail') : t('contact.copyEmail')}
                 </span>
               </div>
             </div>
-            <span className="shrink-0 font-mono text-[11px] font-bold text-white bg-white/10 px-2.5 py-1 rounded-md border border-white/20">
+            <span className="shrink-0 font-mono text-[10px] font-bold text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full border border-emerald-500/25">
               {copied ? t('contact.copiedBadge') : t('contact.copyBadge')}
             </span>
           </button>
-
         </div>
 
         {/* Social Platforms & Verified Profile Cards (Spotlight Hub) */}
@@ -252,7 +281,7 @@ export const ContactChapter: React.FC = () => {
               href="https://github.com/Ignaciobrenas"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex min-h-11 items-center gap-2 rounded-full border border-white/15 bg-[#06110a] px-4 sm:px-5 text-[14px] font-bold text-white hover:border-white hover:bg-[#0c2316] transition-all shadow-sm"
+              className="group inline-flex min-h-11 items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] hover:bg-white/[0.1] backdrop-blur-md px-4 sm:px-5 text-[14px] font-bold text-white hover:border-white transition-all shadow-sm"
             >
               <SiGithub className="size-4 text-white" />
               <span>GitHub</span>
@@ -260,10 +289,10 @@ export const ContactChapter: React.FC = () => {
             </a>
 
             <a
-              href="https://www.linkedin.com/in/ignacio-brenas-mu%C3%B1oz-65a88a297/"
+              href="https://www.linkedin.com/in/ignacio-bre%C3%B1as-mu%C3%B1oz-02a90b218/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex min-h-11 items-center gap-2 rounded-full border border-[#0077b5]/40 bg-[#061822] px-4 sm:px-5 text-[14px] font-bold text-white hover:border-[#0077b5] hover:bg-[#0a2333] transition-all shadow-sm"
+              className="group inline-flex min-h-11 items-center gap-2 rounded-full border border-[#0077b5]/30 bg-[#0077b5]/10 hover:bg-[#0077b5]/20 backdrop-blur-md px-4 sm:px-5 text-[14px] font-bold text-white hover:border-[#0077b5] transition-all shadow-sm"
             >
               <FaLinkedin className="size-4 text-[#0077b5]" />
               <span>LinkedIn</span>
@@ -274,25 +303,43 @@ export const ContactChapter: React.FC = () => {
               href="https://www.credly.com/users/ignacio-brenas-munoz"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex min-h-11 items-center gap-2 rounded-full border border-[#10b981]/40 bg-[#06180e] px-4 sm:px-5 text-[14px] font-mono font-bold text-white hover:border-[#10b981] hover:bg-[#0a2617] transition-all shadow-sm"
+              className="group inline-flex min-h-11 items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 hover:bg-emerald-500/20 backdrop-blur-md px-4 sm:px-5 text-[14px] font-mono font-bold text-white hover:border-emerald-500 transition-all shadow-sm"
             >
-              <ShieldCheck className="size-4 text-[#10b981] group-hover:scale-110 transition-transform" />
+              <ShieldCheck className="size-4 text-emerald-400 group-hover:scale-110 transition-transform" />
               <span>Credly</span>
-              <ArrowUpRight className="size-3.5 text-[#10b981] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              <ArrowUpRight className="size-3.5 text-emerald-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>
           </div>
 
-          <a
-            href="/cv.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-white px-5 text-[14px] font-mono font-extrabold text-[#030805] hover:bg-[#e2e8f0] transition-all shadow-sm w-full sm:w-auto"
-          >
-            <FileText className="size-4 text-[#030805]" />
-            <span>{t('contact.downloadCV')}</span>
-          </a>
+          {/* CV Action Group: Download & Interactive Full Responsive Preview */}
+          <div className="flex flex-wrap items-center gap-3 w-full sm:w-auto">
+            <a
+              href="/CV_IgnacioBreñasMuñoz.pdf"
+              download="CV_IgnacioBreñasMuñoz.pdf"
+              className="group inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-white px-5 text-[14px] font-mono font-extrabold text-[#030805] hover:bg-[#e2e8f0] transition-all shadow-sm flex-1 sm:flex-initial cursor-pointer active:scale-95"
+              title={t('contact.downloadCV')}
+            >
+              <Download className="size-4 text-[#030805] group-hover:translate-y-0.5 transition-transform" />
+              <span>{t('contact.downloadCV')}</span>
+            </a>
+
+            <button
+              type="button"
+              onClick={() => setIsCvPreviewOpen(true)}
+              className="group inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-emerald-500/30 bg-[#091a10] hover:bg-[#0f291a] hover:border-emerald-400/60 backdrop-blur-md px-5 text-[14px] font-mono font-bold text-white transition-all shadow-sm flex-1 sm:flex-initial cursor-pointer active:scale-95"
+              title={t('contact.previewCV')}
+            >
+              <Eye className="size-4 text-emerald-400 group-hover:scale-110 transition-transform" />
+              <span>{t('contact.previewCV')}</span>
+            </button>
+          </div>
         </div>
 
+        {/* Responsive CV Preview Modal */}
+        <CvPreviewModal
+          isOpen={isCvPreviewOpen}
+          onClose={() => setIsCvPreviewOpen(false)}
+        />
       </div>
     </section>
   );

@@ -91,17 +91,20 @@ export const CertificationsChapter: React.FC = () => {
         </p>
 
         {/* Prominent Credly Official Verification Banner */}
-        <div className="mt-7 w-full rounded-[24px] border-2 border-white/25 bg-gradient-to-r from-[#0d2a1b] via-[#071910] to-[#030906] p-5 sm:p-6 shadow-[0_12px_35px_rgba(0,0,0,0.7)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div className="mt-7 w-full rounded-2xl p-5 sm:p-6 bg-emerald-950/20 backdrop-blur-xl border border-emerald-500/30 shadow-[0_8px_32px_rgba(0,0,0,0.18)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="flex items-center gap-4">
-            <div className="size-12 rounded-xl bg-white/10 border border-white/30 flex items-center justify-center text-white shrink-0">
-              <ShieldCheck className="size-6 text-[#10b981]" />
+            <div className="size-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-white shrink-0 shadow-sm">
+              <ShieldCheck className="size-6 text-emerald-400" />
             </div>
             <div>
-              <span className="font-display text-[18px] font-extrabold text-white block">
-                Credly Verified Credentials
+              <span className="text-[11px] font-semibold text-emerald-400 uppercase tracking-wider block">
+                {t('certifications.bannerVerification')}
               </span>
-              <span className="text-[13px] font-mono text-[#94a3b8]">
-                ID: ignacio-brenas-munoz · Cisco & IBM Issued
+              <span className="font-display text-[17px] sm:text-[18px] font-extrabold text-white block">
+                {t('certifications.bannerTitle')}
+              </span>
+              <span className="text-[12px] text-[#94a3b8]">
+                {t('certifications.bannerSubtitle')}
               </span>
             </div>
           </div>
@@ -110,15 +113,16 @@ export const CertificationsChapter: React.FC = () => {
             href="https://www.credly.com/users/ignacio-brenas-munoz"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex min-h-[42px] items-center justify-center gap-2 rounded-full bg-white px-5 text-[13.5px] font-extrabold text-[#030805] hover:bg-[#e2e8f0] active:scale-95 transition-all shadow-md shrink-0"
+            className="inline-flex min-h-[42px] items-center justify-center gap-2 rounded-xl bg-white hover:bg-emerald-400 text-[#030805] px-5 text-[13px] font-bold transition-all shadow-md shrink-0 active:scale-95"
           >
-            <span>{t('certifications.visitCredlyProfile')}</span>
+            <span>{t('certifications.bannerCta')}</span>
+            <ExternalLink className="size-4" />
           </a>
         </div>
 
         {/* Certifications Cards Grid */}
         <div className="mt-6 grid grid-cols-1 gap-5 w-full sm:grid-cols-2 items-stretch">
-          {certs.map((c) => {
+          {certs.map((c, cIdx) => {
             const isCopied = copiedId === c.id;
             const title = t(`certifications.${c.key}`);
             const desc = t(`certifications.${c.descKey}`);
@@ -127,66 +131,78 @@ export const CertificationsChapter: React.FC = () => {
             return (
               <article 
                 key={c.id} 
-                className={`group relative rounded-[22px] border border-white/15 bg-gradient-to-br ${c.bgGradient} p-6 shadow-md hover:border-white hover:shadow-[0_12px_35px_rgba(255,255,255,0.1)] transition-all duration-300 flex flex-col justify-between h-full`}
+                className="group relative rounded-2xl p-6 bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-emerald-500/40 hover:bg-white/[0.05] transition-all duration-300 flex flex-col justify-between h-full shadow-[0_4px_24px_rgba(0,0,0,0.12)]"
               >
                 <div>
-                  <div className="flex items-start justify-between gap-3">
-                    {/* Badge Image Thumbnail */}
-                    <div className="relative size-16 shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
-                      <img 
-                        src={c.badgeImg} 
-                        alt={title}
-                        className="size-full object-contain filter drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]" 
-                      />
+                  {/* Security Pass Header */}
+                  <div className="flex items-start justify-between gap-3 pb-4 border-b border-white/10 text-[11px]">
+                    <div className="flex items-center gap-2">
+                      <span className="font-semibold text-emerald-400 bg-emerald-500/15 px-2.5 py-0.5 rounded-full border border-emerald-500/25 flex items-center gap-1">
+                        <Award className="size-3" />
+                        <span>{t('certifications.certificationNum')} #{cIdx + 1}</span>
+                      </span>
+                      <span className="text-white/60 font-medium">{issuer}</span>
                     </div>
 
                     <span 
-                      className="rounded-full border px-3 py-0.5 font-mono text-[11px] font-extrabold tracking-wider bg-white/5"
+                      className="rounded-full border px-2.5 py-0.5 font-bold tracking-wider bg-white/5"
                       style={{ borderColor: c.accentColor, color: c.accentColor }}
                     >
                       {c.date}
                     </span>
                   </div>
 
-                  {/* Title & Issuer */}
-                  <h3 className="mt-4 font-display text-[19px] sm:text-[20px] font-extrabold text-white leading-tight">
-                    {title}
-                  </h3>
-                  <p className="mt-1 font-mono text-[12px] font-bold text-white/70">
-                    {issuer}
-                  </p>
+                  {/* Badge & Title Layout */}
+                  <div className="mt-4 flex items-start gap-4">
+                    <div className="relative size-14 shrink-0 p-1 rounded-lg bg-white/5 border border-white/10 group-hover:scale-105 transition-transform duration-300 flex items-center justify-center">
+                      <img 
+                        src={c.badgeImg} 
+                        alt={title}
+                        className="size-full object-contain filter drop-shadow" 
+                      />
+                    </div>
+
+                    <div className="min-w-0">
+                      <h3 className="font-display text-[18px] sm:text-[19px] font-extrabold text-white leading-tight">
+                        {title}
+                      </h3>
+                      <p className="mt-1 text-[11.5px] font-semibold text-white/60 uppercase">
+                        {t('certifications.issuedBy')} {issuer}
+                      </p>
+                    </div>
+                  </div>
 
                   {/* Description */}
-                  <p className="mt-3 text-[13.5px] leading-relaxed text-[#94a3b8]">
+                  <p className="mt-3.5 text-[13px] leading-relaxed text-[#94a3b8]">
                     {desc}
                   </p>
                 </div>
 
-                {/* Bottom Actions: Credly Link & Copy ID */}
-                <div className="mt-5 flex flex-wrap items-center justify-between gap-2.5 pt-4 border-t border-white/10">
+                {/* Perforated Security Stub (Ticket Separation) */}
+                <div className="mt-5 pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-2.5">
                   <a
                     href={c.credlyUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-[13px] font-bold text-white hover:text-[#10b981] transition-colors"
+                    className="inline-flex items-center gap-1.5 text-[12.5px] font-medium text-emerald-400 hover:text-emerald-300 transition-colors"
                   >
-                    <span>{t('certifications.viewOnCredly')}</span>
+                    <span>{t('certifications.verifyOnCredly')}</span>
                     <ExternalLink className="size-3.5" />
                   </a>
 
                   <button
                     onClick={() => handleCopy(c.id, c.credentialId)}
-                    className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-[#030805] px-3 py-1 font-mono text-[11px] font-bold text-white hover:border-white transition-all active:scale-95"
+                    className="inline-flex items-center gap-1.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/15 px-3 py-1.5 text-[11px] font-medium text-white/90 hover:text-white transition-all active:scale-95"
                     title={t('certifications.copyId')}
                   >
                     {isCopied ? (
                       <>
-                        <Check className="size-3 text-[#10b981]" />
-                        <span className="text-[#10b981]">{t('certifications.copied')}</span>
+                        <Check className="size-3 text-emerald-400" />
+                        <span className="text-emerald-400">{t('certifications.copied')}</span>
                       </>
                     ) : (
                       <>
-                        <Copy className="size-3 text-white" />
+                        <Copy className="size-3 text-white/70" />
                         <span>{t('certifications.copyId')}</span>
                       </>
                     )}

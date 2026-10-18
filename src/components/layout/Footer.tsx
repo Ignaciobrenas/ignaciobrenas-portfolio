@@ -15,13 +15,11 @@ export const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo & Brand */}
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-full overflow-hidden border border-cyan-400 shadow-[0_0_10px_rgba(34,211,238,0.5)]">
-              <img
-                src="/images/logo.png"
-                alt="Logo"
-                className="w-full h-full object-cover"
-              />
-            </div>
+            <img
+              src="/images/logo.png"
+              alt="Logo Ignacio Breñas"
+              className="h-9 w-auto object-contain filter drop-shadow-[0_2px_12px_rgba(16,185,129,0.5)]"
+            />
             <div>
               <span className="font-extrabold text-sm text-white tracking-wider">
                 IGNACIO<span className="text-cyan-400">.DEV</span>
@@ -50,7 +48,7 @@ export const Footer: React.FC = () => {
               <FiGithub size={16} />
             </a>
             <a
-              href="https://www.linkedin.com/in/ignaciobrenas"
+              href="https://www.linkedin.com/in/ignacio-bre%C3%B1as-mu%C3%B1oz-02a90b218/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-lg bg-white/5 border border-white/10 hover:text-blue-400 hover:border-blue-400 transition-colors"

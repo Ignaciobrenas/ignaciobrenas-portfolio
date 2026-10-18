@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { 
   FiMail, 
-  FiPhone, 
   FiMapPin, 
   FiSend, 
   FiCheckCircle, 
@@ -121,7 +120,7 @@ export const ContactSection: React.FC = () => {
                     <span>GitHub</span>
                   </a>
                   <a
-                    href="https://www.linkedin.com/in/ignaciobrenas"
+                    href="https://www.linkedin.com/in/ignacio-bre%C3%B1as-mu%C3%B1oz-02a90b218/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-1.5 py-2.5 rounded-lg bg-black/60 border border-white/10 hover:border-blue-400 text-xs font-mono text-gray-200 hover:text-white transition-all"

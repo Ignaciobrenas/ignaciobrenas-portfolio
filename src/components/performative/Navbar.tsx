@@ -1,15 +1,14 @@
 import React, { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Mail, MessageSquare } from 'lucide-react';
+import { Mail } from 'lucide-react';
 
 interface NavbarProps {
   activeChapter: string;
   lang: 'es' | 'en';
   onToggleLang: () => void;
-  onOpenChat?: () => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ activeChapter, lang, onToggleLang, onOpenChat }) => {
+export const Navbar: React.FC<NavbarProps> = ({ activeChapter, lang, onToggleLang }) => {
   const { t } = useTranslation();
   const mobileNavRef = useRef<HTMLElement>(null);
 
@@ -43,13 +42,11 @@ export const Navbar: React.FC<NavbarProps> = ({ activeChapter, lang, onToggleLan
           className="inline-flex items-center gap-2.5 sm:gap-3 shrink-0 group"
           title="Ir al inicio / Go to top"
         >
-          <div className="relative size-8 lg:size-9 rounded-[10px] lg:rounded-xl overflow-hidden border-2 border-white/60 bg-[#0c2316] shadow-[0_0_15px_rgba(255,255,255,0.15)] group-hover:scale-105 group-hover:rotate-3 group-hover:border-white group-hover:shadow-[0_0_22px_rgba(255,255,255,0.35)] transition-all duration-300 flex items-center justify-center p-0.5">
-            <img 
-              src="/images/1.png" 
-              alt="Ignacio Breñas Logo" 
-              className="size-full object-contain filter drop-shadow group-hover:brightness-125 transition-all" 
-            />
-          </div>
+          <img 
+            src="/images/1.png" 
+            alt="Ignacio Breñas" 
+            className="h-9 sm:h-10 lg:h-11 w-auto object-contain filter drop-shadow-[0_4px_14px_rgba(16,185,129,0.5)] group-hover:scale-110 group-hover:drop-shadow-[0_6px_22px_rgba(16,185,129,0.8)] transition-all duration-300" 
+          />
           <div className="flex flex-col">
             <span className="font-display text-[15px] sm:text-[16px] lg:text-[17px] font-extrabold tracking-tight text-white group-hover:text-[#10b981] transition-colors leading-tight">
               Ignacio Breñas
@@ -81,21 +78,6 @@ export const Navbar: React.FC<NavbarProps> = ({ activeChapter, lang, onToggleLan
 
         {/* Right Action Buttons */}
         <div className="flex items-center gap-1.5 sm:gap-2 xl:gap-2.5 shrink-0">
-          {/* 32-Bit Chat Trigger Button (Desktop only; mobile has it in tab bar & docked companion) */}
-          {onOpenChat && (
-            <div className="hidden lg:block">
-              <button
-                type="button"
-                onClick={onOpenChat}
-                className="arcade-btn-32bit !h-[34px] xl:!h-[38px] !px-3 xl:!px-3.5 !py-0 !text-[11px] xl:!text-[12px] whitespace-nowrap flex items-center gap-1.5"
-                title="Abrir chat interactivo 32-bit con Ignacio"
-              >
-                <MessageSquare className="size-3.5 shrink-0" />
-                <span>Chat 32-Bit</span>
-              </button>
-            </div>
-          )}
-
           {/* Language Switcher */}
           <button
             onClick={onToggleLang}
@@ -124,16 +106,6 @@ export const Navbar: React.FC<NavbarProps> = ({ activeChapter, lang, onToggleLan
         aria-label="Capítulos móvil" 
         className="flex h-11 items-center gap-1.5 overflow-x-auto px-3 border-t border-white/10 [scrollbar-width:none] lg:hidden bg-[#030805]/95"
       >
-        {onOpenChat && (
-          <button
-            type="button"
-            onClick={onOpenChat}
-            className="inline-flex h-[28px] items-center gap-1.5 rounded-full bg-[#10b981] px-2.5 font-mono text-[10.5px] font-black text-[#030805] shrink-0 shadow-sm"
-          >
-            <MessageSquare className="size-3" />
-            <span>Chat 32-Bit</span>
-          </button>
-        )}
         {chapters.map((ch) => {
           const isActive = activeChapter === ch.id;
           return (

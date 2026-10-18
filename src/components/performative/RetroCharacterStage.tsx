@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 import { PORTFOLIO_DIALOGUES } from '../../data/dialogues';
 import { RetroDialogueBox } from './RetroDialogueBox';
 import { retroAudio } from '../../utils/retroAudio';
-import { Sparkles, MessageSquare, ChevronDown, ChevronUp } from 'lucide-react';
+import { Sparkles, MessageSquare } from 'lucide-react';
 
 interface RetroCharacterStageProps {
   activeChapter: string;
@@ -12,9 +13,15 @@ interface RetroCharacterStageProps {
 }
 
 const TALK_FRAMES = [
-  '/images/sprites/ignacio_talk_mid.png',
-  '/images/sprites/ignacio_talk_open.png',
-  '/images/sprites/ignacio_talk_gesture.png',
+  '/images/sprites/ignacio_talk_mid.svg',
+  '/images/sprites/ignacio_talk_open.svg',
+  '/images/sprites/ignacio_talk_gesture.svg',
+];
+
+const SOTERGUARD_TALK_FRAMES = [
+  '/images/sprites/ignacio_soterguard_talk_mid.svg',
+  '/images/sprites/ignacio_soterguard_talk_open.svg',
+  '/images/sprites/ignacio_soterguard_talk_gesture.svg',
 ];
 
 export const RetroCharacterStage: React.FC<RetroCharacterStageProps> = ({
@@ -23,10 +30,11 @@ export const RetroCharacterStage: React.FC<RetroCharacterStageProps> = ({
   variant = 'desktop',
   onOpenChat,
 }) => {
+  const { t } = useTranslation();
   const [lineIndex, setLineIndex] = useState<number>(0);
   const [displayedText, setDisplayedText] = useState<string>('');
   const [isTyping, setIsTyping] = useState<boolean>(true);
-  const [currentSprite, setCurrentSprite] = useState<string>('/images/sprites/ignacio_idle.png');
+  const [currentSprite, setCurrentSprite] = useState<string>('/images/sprites/ignacio_idle.svg');
   const [isMuted, setIsMuted] = useState<boolean>(() => retroAudio.getMuted());
   const [isMobileMinimized, setIsMobileMinimized] = useState<boolean>(false);
 
@@ -77,18 +85,26 @@ export const RetroCharacterStage: React.FC<RetroCharacterStageProps> = ({
       if (prefersReducedMotion) {
         setDisplayedText(fullText);
         setIsTyping(false);
-        setCurrentSprite(currentLine.pose || '/images/sprites/ignacio_idle.png');
+        setCurrentSprite(currentLine.pose || '/images/sprites/ignacio_idle.svg');
         return;
       }
 
       setDisplayedText('');
       setIsTyping(true);
 
-      // Mouth animation loop while typing
-      mouthTimerRef.current = window.setInterval(() => {
-        mouthFrameIdxRef.current = (mouthFrameIdxRef.current + 1) % TALK_FRAMES.length;
-        setCurrentSprite(TALK_FRAMES[mouthFrameIdxRef.current]);
-      }, 110);
+      const isSoterguard = Boolean(currentLine.pose?.includes('soterguard') || chapterData.chapterId === 'soteguard' || chapterData.chapterId === 'soterguard');
+      const isPlatformPose = Boolean(currentLine.pose?.includes('github') || currentLine.pose?.includes('linkedin') || currentLine.pose?.includes('credly'));
+      const activeTalkFrames = isSoterguard ? SOTERGUARD_TALK_FRAMES : TALK_FRAMES;
+
+      if (!isPlatformPose) {
+        // Mouth animation loop while typing
+        mouthTimerRef.current = window.setInterval(() => {
+          mouthFrameIdxRef.current = (mouthFrameIdxRef.current + 1) % activeTalkFrames.length;
+          setCurrentSprite(activeTalkFrames[mouthFrameIdxRef.current]);
+        }, 110);
+      } else if (currentLine.pose) {
+        setCurrentSprite(currentLine.pose);
+      }
 
       const typeNextChar = () => {
         if (charIdx < fullText.length) {
@@ -115,7 +131,7 @@ export const RetroCharacterStage: React.FC<RetroCharacterStageProps> = ({
           clearTimers();
           setIsTyping(false);
           // Settle into final line pose
-          setCurrentSprite(currentLine.pose || '/images/sprites/ignacio_idle.png');
+          setCurrentSprite(currentLine.pose || '/images/sprites/ignacio_idle.svg');
         }
       };
 
@@ -125,14 +141,14 @@ export const RetroCharacterStage: React.FC<RetroCharacterStageProps> = ({
     typingTimerRef.current = window.setTimeout(startTyping, 80);
 
     return () => clearTimers();
-  }, [fullText, currentLine, clearTimers]);
+  }, [fullText, currentLine, clearTimers, chapterData.chapterId]);
 
   // Fast forward to full text immediately
   const handleFastForward = useCallback(() => {
     clearTimers();
     setDisplayedText(fullText);
     setIsTyping(false);
-    setCurrentSprite(currentLine.pose || '/images/sprites/ignacio_idle.png');
+    setCurrentSprite(currentLine.pose || '/images/sprites/ignacio_idle.svg');
   }, [fullText, currentLine, clearTimers]);
 
   // Advance to next dialogue line
@@ -196,7 +212,7 @@ export const RetroCharacterStage: React.FC<RetroCharacterStageProps> = ({
             type="button"
             onClick={() => setIsMobileMinimized(false)}
             className="group relative size-13 sm:size-14 rounded-full border-2 border-[#10b981] bg-[#030805]/95 shadow-[0_8px_30px_rgba(0,0,0,0.85)] flex items-center justify-center cursor-pointer active:scale-95 transition-all p-1 hover:border-white hover:shadow-[0_0_20px_rgba(16,185,129,0.5)]"
-            title="Hablar con Ignacio"
+            title={t('dialogueBox.talkTitle')}
           >
             <img
               src={currentSprite}
@@ -236,7 +252,7 @@ export const RetroCharacterStage: React.FC<RetroCharacterStageProps> = ({
                   type="button"
                   onClick={onOpenChat}
                   className="arcade-btn-32bit py-1 px-2.5 text-[9.5px] rounded-full shadow-lg"
-                  title="Abrir chat 32-bit completo"
+                  title={t('dialogueBox.openFullChat')}
                 >
                   <MessageSquare className="size-3" />
                   <span>{lang === 'es' ? 'Chat 32-Bit' : '32-Bit Chat'}</span>
@@ -247,7 +263,7 @@ export const RetroCharacterStage: React.FC<RetroCharacterStageProps> = ({
               <div
                 onClick={onOpenChat ? onOpenChat : handleAdvance}
                 className="relative size-16 sm:size-18 cursor-pointer group active:scale-95 transition-transform"
-                title="Toca para interactuar o chatear con Ignacio"
+                title={t('dialogueBox.interactWithIgnacio')}
               >
                 <img
                   src={currentSprite}
@@ -267,21 +283,21 @@ export const RetroCharacterStage: React.FC<RetroCharacterStageProps> = ({
   // DESKTOP RIGHT STICKY STAGE VARIANT
   // ==========================================
   return (
-    <div className="relative w-full h-full max-h-[640px] rounded-[24px] border-2 border-white/20 bg-gradient-to-b from-[#06140c]/95 via-[#030805]/95 to-[#091f14]/90 p-4 sm:p-5 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.9),0_0_45px_rgba(20,56,35,0.35)] backdrop-blur-xl overflow-hidden flex flex-col justify-between">
+    <div className="relative w-full h-full max-h-[640px] engineering-chassis corner-crosshair rounded-xl p-4 sm:p-5 bg-gradient-to-b from-[#06140c] via-[#030805] to-[#040e08] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.95)] overflow-hidden flex flex-col justify-between border-white/20">
       
       {/* Top Header HUD */}
-      <div className="relative z-10 flex items-center justify-between pb-3 border-b border-white/10">
+      <div className="relative z-10 flex items-center justify-between pb-3 border-b border-white/10 font-mono text-[11px]">
         <div className="flex items-center gap-2">
-          <div className="size-2 rounded-full bg-[#10b981] animate-ping" />
-          <span className="font-mono text-[11px] font-extrabold text-white tracking-wider uppercase">
-            IGNACIO BREÑAS · INTERACTIVO
+          <span className="size-2 rounded-full bg-[#10b981] shadow-[0_0_8px_#10b981]" />
+          <span className="font-extrabold text-white tracking-wider uppercase">
+            IGNACIO BREÑAS · 32-BIT STAGE
           </span>
         </div>
 
         <div className="flex items-center gap-2">
           <span className="hud-pill text-[10px] px-2.5 py-0.5 border-[#10b981]/40 text-[#10b981]">
             <Sparkles className="size-3" />
-            <span>32_BIT_ENGINE</span>
+            <span>RUNTIME: READY</span>
           </span>
         </div>
       </div>
@@ -312,7 +328,7 @@ export const RetroCharacterStage: React.FC<RetroCharacterStageProps> = ({
         <div 
           onClick={onOpenChat ? onOpenChat : handleAdvance}
           className="relative flex-1 min-h-[200px] max-h-[270px] flex items-center justify-center cursor-pointer group"
-          title="Haz clic para abrir el chat 32-bit con Ignacio"
+          title={t('dialogueBox.clickToOpenChat')}
         >
           {/* Subtle Ambient Stage Light */}
           <div className="absolute inset-0 bg-radial from-[#10b981]/15 via-transparent to-transparent opacity-60 rounded-full blur-2xl group-hover:opacity-100 transition-opacity" />
@@ -327,7 +343,7 @@ export const RetroCharacterStage: React.FC<RetroCharacterStageProps> = ({
           {/* Interaction Bubble Badge Hint */}
           <div className="absolute bottom-1 right-4 z-20 flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#030805]/95 border border-[#10b981]/50 text-[10.5px] font-mono text-white shadow-lg group-hover:border-[#10b981] group-hover:bg-[#07190f] transition-all">
             <MessageSquare className="size-3 text-[#10b981]" />
-            <span className="font-bold">ABRIR_CHAT_32BIT</span>
+            <span className="font-bold">{t('dialogueBox.openChat32')}</span>
           </div>
         </div>
 
@@ -342,7 +358,7 @@ export const RetroCharacterStage: React.FC<RetroCharacterStageProps> = ({
             className="arcade-btn-32bit w-full py-2.5 text-[11.5px]"
           >
             <MessageSquare className="size-4" />
-            <span>{lang === 'es' ? 'Hablar con Ignacio (32-Bit)' : 'Chat with Ignacio (32-Bit)'}</span>
+            <span>{t('cover.chatButton')}</span>
           </button>
         )}
 
@@ -357,7 +373,7 @@ export const RetroCharacterStage: React.FC<RetroCharacterStageProps> = ({
             onClick={handleAdvance}
             className="px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-[#030805] border border-white/30 text-white hover:bg-white hover:text-[#030805] transition-all"
           >
-            <span>{isTyping ? 'SALTAR' : 'SIGUIENTE'}</span>
+            <span>{isTyping ? t('dialogueBox.btnSkip') : t('dialogueBox.btnNext')}</span>
           </button>
         </div>
       </div>

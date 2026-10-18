@@ -75,6 +75,45 @@
   background: #ffffff;
 }
 
+/* Custom Cyber-Retro Horizontal Scrollbar for Chat & Horizontal Containers */
+.chat-horizontal-bar {
+  scrollbar-width: thin;
+  scrollbar-color: #10b981 rgba(3, 15, 8, 0.75);
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+.chat-horizontal-bar::-webkit-scrollbar {
+  height: 6px;
+}
+
+.chat-horizontal-bar::-webkit-scrollbar-track {
+  background: rgba(3, 14, 7, 0.85);
+  border-radius: 9999px;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  margin: 0 4px;
+}
+
+.chat-horizontal-bar::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #10b981, #06b6d4);
+  border-radius: 9999px;
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transition: all 0.2s ease;
+}
+
+.chat-horizontal-bar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, #34d399, #38bdf8);
+  box-shadow: 0 0 14px rgba(56, 189, 248, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+/* Neon Horizontal Divider */
+.chat-horizontal-divider {
+  position: relative;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.35) 20%, rgba(56, 189, 248, 0.5) 50%, rgba(16, 185, 129, 0.35) 80%, transparent);
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.25);
+}
+
 /* Background Gradients & Noise */
 .performative-bg {
   background-color: #030805;
@@ -105,13 +144,19 @@ section[data-chapter] {
 
 @media (min-width: 1024px) {
   .chapter-grid {
-    grid-template-columns: minmax(0, 1fr) 400px;
+    grid-template-columns: minmax(0, 1fr) 350px;
   }
 }
 
 @media (min-width: 1280px) {
   .chapter-grid {
-    grid-template-columns: minmax(0, 1fr) 460px;
+    grid-template-columns: minmax(0, 1fr) 380px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .chapter-grid {
+    grid-template-columns: minmax(0, 1fr) 400px;
   }
 }
 
@@ -239,26 +284,126 @@ section[data-chapter] {
   line-height: 1.2;
 }
 
+/* ==========================================================================
+   Bespoke Non-AI Engineering Chassis & Dossier Box System
+   ========================================================================== */
 
-
-/* Sticky notes */
-.sticky-note {
-  position: relative;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+/* Technical Blueprint Dot Grid Texture */
+.bg-grid-technical {
+  background-image: 
+    radial-gradient(rgba(255, 255, 255, 0.09) 1px, transparent 1px);
+  background-size: 20px 20px;
 }
 
-.sticky-note::before {
-  content: '';
+.bg-lines-technical {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Authentic Hardware Chassis Box (Clean, Precision Bevel, High Contrast) */
+.engineering-chassis {
+  position: relative;
+  background-color: #040c07;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.16),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.6),
+    0 20px 50px -10px rgba(0, 0, 0, 0.85);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.engineering-chassis:hover {
+  border-color: rgba(255, 255, 255, 0.28);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.24),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.7),
+    0 26px 60px -8px rgba(0, 0, 0, 0.95);
+}
+
+/* Tactical Corner Registration Marks (Crosshairs '+' on corners) */
+.corner-crosshair {
+  position: relative;
+}
+.corner-crosshair::before,
+.corner-crosshair::after {
+  content: '+';
   position: absolute;
-  top: -6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.35);
+  pointer-events: none;
+  font-weight: 300;
+  user-select: none;
+}
+.corner-crosshair::before {
+  top: 10px;
+  left: 12px;
+}
+.corner-crosshair::after {
+  top: 10px;
+  right: 12px;
+}
+
+/* Industrial Ventilation Slits */
+.vent-slits {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+.vent-slits span {
+  width: 3px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 1px;
+}
+
+/* Tactile Workshop Index Cards with Realistic Washi / Masking Tape */
+.tactile-index-card {
+  position: relative;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #0c1f15 0%, #06120b 100%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.5),
+    0 16px 30px -4px rgba(0, 0, 0, 0.75),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.tactile-index-card:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 
+    0 8px 12px -2px rgba(0, 0, 0, 0.6),
+    0 22px 36px -4px rgba(0, 0, 0, 0.85),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* Authentic Torn Washi Tape Header on Index Cards */
+.washi-tape {
+  position: absolute;
+  top: -9px;
   left: 50%;
   transform: translateX(-50%);
-  width: 50px;
-  height: 14px;
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(4px);
-  border-radius: 3px;
+  width: 64px;
+  height: 18px;
+  background: rgba(245, 245, 240, 0.38);
+  backdrop-filter: blur(3px);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+  clip-path: polygon(
+    0% 2px, 2px 0%, 98% 0%, 100% 2px,
+    98% 16px, 100% 18px, 97% 17px, 95% 18px, 
+    5% 18px, 3% 17px, 0% 18px, 1% 15px
+  );
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Speaker Grille Pattern (for 32-bit intercom / audio consoles) */
+.speaker-grille {
+  background-image: radial-gradient(circle, rgba(16, 185, 129, 0.4) 1.5px, transparent 1.5px);
+  background-size: 7px 7px;
 }
 
 /* Telemetry HUD Mini Cards */
@@ -293,6 +438,13 @@ section[data-chapter] {
   image-rendering: crisp-edges;
 }
 
+/* Vector SVG sprite optimization: razor-sharp geometry, zero blur, maximum vector precision */
+img[src$=".svg"].pixelated,
+img.sprite-svg {
+  image-rendering: auto;
+  shape-rendering: geometricPrecision;
+}
+
 .font-pixel {
   font-family: var(--font-pixel), monospace;
 }
@@ -301,18 +453,18 @@ section[data-chapter] {
   font-family: var(--font-retro), monospace;
 }
 
-/* 32-Bit Enhanced Retro Dialog Box with High-Contrast Beveled Framing */
+/* 32-Bit Enhanced Retro Dialog Box with Modern Translucency & Frosted Glass */
 .retro-dialogue-box,
 .undertale-box {
-  background-color: #030805;
-  border: 3px solid #ffffff;
-  border-radius: 8px;
+  background-color: rgba(7, 23, 14, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
   box-shadow: 
-    0 0 0 2px #030805, 
-    0 0 0 4px rgba(255, 255, 255, 0.45),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2),
-    0 16px 42px -8px rgba(0, 0, 0, 0.95),
-    0 0 35px rgba(16, 185, 129, 0.2);
+    0 0 0 1px rgba(16, 185, 129, 0.2), 
+    0 20px 48px -10px rgba(0, 0, 0, 0.7),
+    0 0 35px rgba(16, 185, 129, 0.15);
   position: relative;
 }
 

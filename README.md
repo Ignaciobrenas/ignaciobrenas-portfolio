@@ -21,7 +21,7 @@
 
   <!-- Action Badges -->
   <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ignaciobrenas@gmail.com&su=Contacto%20Profesional%20-%20Ignacio%20Bre%C3%B1as"><img src="https://img.shields.io/badge/Gmail-ignaciobrenas%40gmail.com-ea4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail" /></a>
-  <a href="https://www.linkedin.com/in/ignacio-brenas-mu%C3%B1oz-65a88a297/"><img src="https://img.shields.io/badge/LinkedIn-Ignacio_Bre%C3%B1as-0077b5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="https://www.linkedin.com/in/ignacio-bre%C3%B1as-mu%C3%B1oz-02a90b218/"><img src="https://img.shields.io/badge/LinkedIn-Ignacio_Bre%C3%B1as-0077b5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
   <a href="https://github.com/Ignaciobrenas"><img src="https://img.shields.io/badge/GitHub-30%2B_Repos-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
   <a href="public/cv.pdf"><img src="https://img.shields.io/badge/Curriculum_Vitae-PDF_Oficial-10b981?style=for-the-badge&logo=adobe-acrobat-reader&logoColor=white" alt="Descargar CV" /></a>
 
@@ -186,7 +186,7 @@ npm run preview
 - **Disponibilidad**: Incorporación inmediata para proyectos de ingeniería de software (Presencial, Híbrido o Remoto).
 - **Teléfono**: [+34 640 770 380](tel:+34640770380)
 - **Correo Directo**: [ignaciobrenas@gmail.com](mailto:ignaciobrenas@gmail.com)
-- **LinkedIn**: [linkedin.com/in/ignacio-brenas-muñoz](https://www.linkedin.com/in/ignacio-brenas-mu%C3%B1oz-65a88a297/)
+- **LinkedIn**: [linkedin.com/in/ignacio-breñas-muñoz-02a90b218](https://www.linkedin.com/in/ignacio-bre%C3%B1as-mu%C3%B1oz-02a90b218/)
 - **GitHub**: [github.com/Ignaciobrenas](https://github.com/Ignaciobrenas)
 - **Credly**: [credly.com/users/ignacio-brenas-munoz](https://www.credly.com/users/ignacio-brenas-munoz)
 

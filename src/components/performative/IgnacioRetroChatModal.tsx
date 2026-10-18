@@ -626,8 +626,8 @@ export const IgnacioRetroChatModal: React.FC<IgnacioRetroChatModalProps> = ({
       lower.includes('english')
     ) {
       const answer = lang === 'es'
-        ? '* Hablo con fluidez tres idiomas:\n\n1. Castellano: Nativo\n2. English: Nivel profesional B2/C1 técnico para comunicación internacional, documentación y trabajo en equipo.\n3. Català: Nativo (educación íntegra en Cataluña).'
-        : "* I am proficient in three languages:\n\n1. Spanish (Castellano): Native\n2. English: Professional B2/C1 technical working proficiency for international collaboration, RFCs, and code review.\n3. Catalan: Native (educated in Catalonia).";
+        ? '* Hablo con fluidez tres idiomas:\n\n1. Castellano: Nativo\n2. English: Inglés técnico profesional para comunicación internacional, documentación técnica y trabajo en equipo.\n3. Català: Nativo (educación íntegra en Cataluña).'
+        : "* I am proficient in three languages:\n\n1. Spanish (Castellano): Native\n2. English: Professional technical working proficiency for international collaboration, RFCs, and code review.\n3. Catalan: Native (educated in Catalonia).";
       typeAnswer(answer, '/images/sprites/ignacio_confident.svg', false);
       return;
     }
